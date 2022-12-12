@@ -1,0 +1,163 @@
+/* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+/* font-family: 'Trispace', sans-serif;
+font-family: 'Zen Maru Gothic', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 16px * 2);
+  max-width: 800px;
+  outline: 1px solid green;
+}
+
+section {
+  /* padding-top: 80px;
+  padding-bottom: 80px; */
+  width: 100%;
+}
+
+p {
+  line-height: 2.7;
+}
+
+.title {
+  font-family: 'Trispace', sans-serif;
+}
+
+/* --------------------------
+        header
+-----------------------------*/
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  /* background-color: rgba(255,255,255,0.8); */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  outline: 1px solid red;
+}
+
+header .container {
+  /* position: relative; */
+  outline: 1px solid purple; 
+}
+
+/* ハンバーガーメニュー（閉じている時） */
+.hamburger {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  cursor: pointer;
+  z-index: 30;
+  width: 30px;
+  margin-left: auto;
+  /* margin-top: 2px; */
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #C1CD75;
+  transition: all .3s;
+}
+
+.hamburger span + span {
+  margin-top: 7px;
+}
+
+.hero {
+  height: calc(var(--vh, 1vh) * 100);
+  /* height: calc((var(--vh, 1vh) * 100) + 100px); */
+  position: relative;
+}
+
+.hero-bg {
+  height: 100%;
+  width: 80%;
+  background: url("../img/hero-bg.jpg");
+  background-size: cover;
+  /* background-size: contain; */
+background-repeat: no-repeat;
+background-position: 40% center;
+border-top-right-radius: 60% 50%;
+border-bottom-right-radius: 60% 50%;
+animation: hero-img 7s forwards;
+}
+
+.hero-bg::after{
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.2;
+}
+
+@keyframes hero-img {
+  from {
+    border-top-right-radius: 60% 50%;
+border-bottom-right-radius: 60% 50%;
+transform: scale(1);
+width: 80%;
+  }
+
+  to {
+    border-top-right-radius: 20% 50%;
+border-bottom-right-radius: 20% 50%;
+transform: scale(1.1);
+width: 85%;
+  }
+}
+
+.hero .container {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  height: 100%;
+  /* z-index: 3; */
+}
+
+.site-title {
+  padding-top: 108px;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+
+
