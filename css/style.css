@@ -12,8 +12,7 @@ html {
 
 body {
   font-family: 'Noto Sans', sans-serif;
-/* font-family: 'Trispace', sans-serif;
-font-family: 'Zen Maru Gothic', sans-serif; */
+/* font-family: 'Zen Maru Gothic', sans-serif;  */
 }
 
 a {
@@ -51,6 +50,43 @@ p {
   font-family: 'Trispace', sans-serif;
 }
 
+.section-title {
+  font-size: 18px;
+  color:#87755E;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 24px;
+}
+
+/*========= CanvasレイアウトのためのCSS ===============*/
+.contents {
+  padding:300px 0;
+  text-align:center;
+  outline: 1px solid green;
+}
+/*========= waveを描画するエリア設定 ===============*/
+.wave{
+  width: 100%;
+  height: 200px;
+  position: relative;
+  outline: 1px solid red;
+}
+
+.wave canvas{
+    position: absolute;
+    /* bottom: 0; */
+    top: 0;
+    left:0;
+    width: 100%;
+    /* transform: rotate(-45deg); */
+    /* outline: 1px solid red; */
+}
+
+main {
+  /* position: relative; */
+}
+
 /* --------------------------
         header
 -----------------------------*/
@@ -63,12 +99,7 @@ header {
   z-index: 10;
   display: flex;
   align-items: center;
-  outline: 1px solid red;
-}
-
-header .container {
-  /* position: relative; */
-  outline: 1px solid purple; 
+  /* outline: 1px solid red; */
 }
 
 /* ハンバーガーメニュー（閉じている時） */
@@ -95,10 +126,14 @@ header .container {
   margin-top: 7px;
 }
 
+/* --------------------------
+        hero
+-----------------------------*/
+
 .hero {
   height: calc(var(--vh, 1vh) * 100);
-  /* height: calc((var(--vh, 1vh) * 100) + 100px); */
   position: relative;
+  margin-bottom: 50px;
 }
 
 .hero-bg {
@@ -129,16 +164,16 @@ animation: hero-img 7s forwards;
 @keyframes hero-img {
   from {
     border-top-right-radius: 60% 50%;
-border-bottom-right-radius: 60% 50%;
-transform: scale(1);
-width: 80%;
+    border-bottom-right-radius: 60% 50%;
+    transform: scale(1);
+    width: 80%;
   }
 
   to {
     border-top-right-radius: 20% 50%;
-border-bottom-right-radius: 20% 50%;
-transform: scale(1.1);
-width: 85%;
+    border-bottom-right-radius: 20% 50%;
+    transform: scale(1.1);
+    width: 85%;
   }
 }
 
@@ -147,17 +182,110 @@ width: 85%;
   top: 0;
   left: 16px;
   height: 100%;
-  /* z-index: 3; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .site-title {
-  padding-top: 108px;
+  margin-left: 8px;
+  margin-top: 180px;
   font-size: 20px;
   line-height: 27px;
   font-weight: 600;
   color: #fff;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: site-title 4s forwards 1s;
 }
 
+.site-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #87755E;
+  margin-bottom: 80px;
+  text-shadow: 1px 1px 1px #fff;
+  margin-left: 30%;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: site-subtitle 3s forwards 2s;
+}
 
+@keyframes site-title {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  70% {
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes site-subtitle {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  70% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll {
+  display: block;
+  color: #87755E;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 16px;
+  transform: translateY(-190px) rotate(90deg);
+}
+
+.scroll::after {
+  content:'';
+  position: absolute;
+  width: 88px;
+  height: 2px;
+  /* background: linear-gradient(to right,#87755E, #fff); */
+  background-color: #87755E;
+  top: calc(50% - 1px);
+  left: 54px;
+  /* right: 16px; */
+  /* animation: scroll 2s infinite; */
+}
+
+/* @keyframes scroll {
+  from {
+    background: linear-gradient(to right,#87755E, #fff);
+  }
+
+  50% {
+    background: linear-gradient(to right,#fff, #87755E);
+
+  }
+
+  to {
+    background: linear-gradient(to right,#87755E, #fff);
+  }
+} */
+
+/* --------------------------
+        about
+-----------------------------*/
 
 
