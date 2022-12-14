@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Trispace:wght@400;500;600&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -43,8 +43,8 @@
     <div class="about-contents">
       <div class="container">
         <div class="about-photos">
-          <img src="img/about-profile.jpg" alt="" srcset="">
-          <img src="img/letter.jpg" alt="" srcset="">
+          <img class="about-profile-photo" src="img/about-profile.jpg" alt="" srcset="">
+          <img class="letter" src="img/letter.jpg" alt="" srcset="">
         </div>
 
         <div class="about-text">
@@ -57,27 +57,64 @@
           <div class="about-details">
             <p>これまで音楽の講師やフリーの作曲・編曲活動をしていました。</p>
 
-            <a href="https://www.noriko-fujiwara.com/">藤原典子</a>
+            <a class="button fujiwara-btn" href="https://www.noriko-fujiwara.com/">藤原典子</a>
 
             <p>2021年からはWeb制作を始めました。
               音楽活動は、新しい技術、表現方法に常にアンテナを張り、情報収集して行ってきました。
               音楽講師としての仕事も、音楽教育の面からどのように学校に貢献できるかを常に考えて仕事をしておりました。
               Web制作においても、これらの経験を活かし、お客さまのご要望に真摯に向き合い、より多くの人々に想いや情報をお届けいたします。</p>
           </div>
-
-
+          <a class="button link-btn" href="#">to Profile</a>
         </div>
       </div>
     </div>
-    <!-- <p class="contents">コンテンツ</p> -->
-
+    <div class="gradient-bg"></div>
   </section>
+
   <section id="skills">
     <div class="wave">
       <canvas id="waveCanvas2"></canvas>
       <h2 class="section-title title">Skills</h2>
     </div>
-    <p class="contents"></p>
+
+    <div class="skills-contents">
+      <div class="container">
+        <ul class="skills-web">
+          <li>
+            <i class="bi bi-laptop-fill"></i>
+            <p>HTML, CSS, JavaScript, jQueryを使用したWebサイト制作</p>
+          </li>
+          <li>
+            <i class="bi bi-laptop-fill"></i>
+            <p>Figmaを使用したデザインカンプ作成</p>
+          </li>
+          <li>
+            <i class="bi bi-laptop-fill"></i>
+            <p>Figma, AdobeXDによるデザインカンプからのコーディング</p>
+          </li>
+          <li>
+            <i class="bi bi-laptop-fill"></i>
+            <p>Git, GitHubを利用したソースコード管理</p>
+          </li>
+        </ul>
+  
+        <ul class="skills-others">
+          <li>
+            <i class="bi bi-pencil-fill"></i>
+            <p>中学校教諭一種免許状(音楽)、高等学校教諭一種免許状(音楽)</p>
+          </li>
+          <li>
+            <i class="bi bi-pencil-fill"></i>
+            <p>TOEIC公開テスト 860点取得 (2009年03月15日）</p>
+          </li>
+        </ul>
+
+        <div class="skills-btns">
+          <a class="button link-btn" href="#">to Works</a>
+          <a class="button link-btn" href="#">to GitHub</a>
+        </div>
+      </div>
+    </div>
 
   </section>
 
