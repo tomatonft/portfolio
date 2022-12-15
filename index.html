@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Trispace:wght@400;500;600&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -115,7 +119,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <section id="works">
@@ -123,21 +126,126 @@
       <canvas id="waveCanvas3"></canvas>
       <h2 class="section-title title">Works</h2>
     </div>
-    <p class="contents"></p>
 
+    <div class="works-contents">
+      <div class="swiper-container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="item">
+              <a href="music-quiz/index.html">
+                <img class="mockup-image" src="img/mockup-musicquiz.png" alt="">
+              </a>
+              <h3 class="swiper-title"><span class="works-title-underline">おんがくクイズ</span></h3>
+              <p class="category">Website</p>
+              <p class="swiper-text">音符を学びはじめたお子さまのための音当てクイズゲームです。 音楽の初心者を教える仕事をしてきた経験と、Web制作の経験を活かした音当てクイズゲームを作成しました。</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <a href="music-quiz/index.html">
+                <img class="mockup-image" src="img/mockup-andante.png" alt="">
+              </a>
+              <h3 class="swiper-title"><span class="works-title-underline">Andante ピアノ教室</span></h3>
+              <p class="category">Website</p>
+              <p class="swiper-text">架空の「千葉県流山市の音楽教室」をテーマにサイト設計・デザイン・コーディングを一人で行いました。</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <a href="music-quiz/index.html">
+                <img class="mockup-image" src="img/mockup-noriko-fujiwara.png" alt="">
+              </a>
+              <h3 class="swiper-title"><span class="works-title-underline">作曲家 藤原典子</span></h3>
+              <p class="category">Website</p>
+              <p class="swiper-text">作曲家 藤原典子のウェブサイトを制作しました。東京藝術大学音楽学部作曲科を卒業後、作曲、編曲、後進の指導などを行なっている音楽家のページです。</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <a href="music-quiz/index.html">
+                <img class="mockup-image" src="img/mockup-usagi-an.png" alt="">
+              </a>
+              <h3 class="swiper-title"><span class="works-title-underline">うさぎ庵</span></h3>
+              <p class="category">Website</p>
+              <p class="swiper-text">架空の「台東区の和菓子屋さん」をテーマにサイト設計・デザイン・コーディングを一人で行いました。</p>
+            </div>
+          </div>
+          <!-- <div class="swiper-slide">
+            <div class="item">
+              <a href="music-quiz/index.html">
+                <img class="mockup-image" src="img/mockup-osumou-flowers.png" alt="">
+              </a>
+              <h3 class="swiper-title"><span class="works-title-underline">Noriko Tomita Portfolio</span></h3>
+              <p class="category">Website</p>
+              <p class="swiper-text">当サイトです。</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <a class="button link-btn" href="#">View All Works</a>
+    </div>
   </section>
+
   <section id="contact">
     <div class="wave">
       <canvas id="waveCanvas4"></canvas>
       <h2 class="section-title title">Contact</h2>
     </div>
-    <p class="contents"></p>
+    <div class="contact-contents">
+      <div class="container">
+        <div class="contact-text">
+          <p>ポートフォリオをご覧いただ誠にありがとうございます。<br>
+          ご意見・ご感想・お問い合わせ等をお寄せいただけますと幸いです。<br>
+          下記フォームに必須事項をご入力ください。</p>
+          <p class="form-attention">※ <span>*</span>印がついている項目は、必ずご記入くださいますようお願いいたします。</p>
+        </div>
+
+        <form action="" method="post" target="" onsubmit="submitted=true;">
+          <label class="animate">
+            <p>お名前<span>*</span></p>
+            <input type="text" name="" class="text" required>
+          </label>
+  
+          <label class="animate">
+            <p>お名前（ふりがな）<span>*</span></p>
+            <input type="text" name="" class="text" required>
+          </label>
+
+          <label class="animate">
+            <p>メールアドレス<span>*</span></p>
+            <input type="text" name="" class="text" required>
+          </label>
+
+          <label class="animate">
+            <p>お問い合わせ内容<span>*</span></p>
+            <textarea name="" required></textarea>
+          </label>
+
+          <button type="submit" class="button link-btn">Send</button>
+        </form>
+      </div>
+    </div>
 
   </section>
  </main>
  <footer>
 
  </footer>
+ <div id="cursor"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>

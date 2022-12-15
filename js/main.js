@@ -124,4 +124,74 @@ function drawSine(canvas, t, zoom, delay) {
 
 init();
 
+// slider
+const mySwiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+    spaceBetween: 48,
+    slidesPerView: 1.1,
+  breakpoints: {
+    // 768px以上の場合
+    768: {
+      slidesPerView: 2.1
+    }
+  },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+     
+    },
+   
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+   
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+
+
+//準備
+let cursorR = 4;  //カーソルの半径
+const cursor = document.getElementById('cursor');  //カーソル用のdivを取得
+
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+    cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});
+
+//リンクにホバー時はクラスをつける
+const linkElem = document.querySelectorAll('.item > a');
+for (let i = 0; i < linkElem.length; i++) {
+    linkElem[i].addEventListener('mouseover', function (e) {
+        cursor.classList.add('hov_');
+        cursor.textContent = 'Learn More';
+    });
+    linkElem[i].addEventListener('mouseout', function (e) {
+        cursor.classList.remove('hov_');      
+        cursor.textContent = '';
+    });
+}
+
+const swiperBtns = document.querySelectorAll('.swiper-buttons > div');
+for (let i = 0; i < swiperBtns.length; i++) {
+  swiperBtns[i].addEventListener('mouseover', function (e) {
+      cursor.classList.add('hover');
+      if (swiperBtns[i].className === 'swiper-button-prev') {
+        cursor.textContent = 'Prev';
+      } else {
+        cursor.textContent = 'Next';
+      }
+  });
+  swiperBtns[i].addEventListener('mouseout', function (e) {
+      cursor.classList.remove('hover');      
+      cursor.textContent = '';
+  });
+}
+
+
 }

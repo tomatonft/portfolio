@@ -8,6 +8,10 @@
   font-size: 14px;
 }
 
+html,body,a {
+  cursor: none; /* カーソル非表示 */
+}
+
 html {
   height: 100%;
 }
@@ -86,11 +90,11 @@ p {
 }
 
 /*========= CanvasレイアウトのためのCSS ===============*/
-.contents {
+/* .contents {
   padding:300px 0;
   text-align:center;
   outline: 1px solid green;
-}
+} */
 /*========= waveを描画するエリア設定 ===============*/
 .wave{
   width: 100%;
@@ -104,8 +108,6 @@ p {
     left:0;
     width: 100%;
 }
-
-
 
 /* --------------------------
         header
@@ -153,7 +155,7 @@ header {
 .hero {
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 88px;
   width: 100%;
   outline: 1px solid red;
 }
@@ -389,7 +391,9 @@ animation: hero-img 7s forwards;
   color: #87755E;
   background: url("../img/skills-bg.jpg");
   background-size: cover;
+  background-position: center center;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skills-contents .container {
@@ -442,8 +446,271 @@ animation: hero-img 7s forwards;
   justify-content: center;
   gap: 32px;
   margin-top: 48px;
-  
 }
 
+/* --------------------------
+        works
+-----------------------------*/
 
+.works-contents {
+  background-image: url('../img/works-bg.png');
+  height: fit-content;
+  padding-bottom: 88px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.swiper-container {
+  margin: 0 auto;
+  width: calc(100% - 16px * 2);
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+ /* outline: 1px solid red; */
+}
+
+/* #learn-more {
+  display: block;
+  text-decoration: none;
+  background-color: gray;
+  color:bisque;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  display: none;
+}
+
+#learn-more.show {
+  display: block;
+} */
+
+.swiper{
+  padding:0 50px 50px 50px;
+  margin-top: 88px;
+}
+
+.swiper-wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  color: #87755E;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-title {
+  text-align: left;
+  font-weight: normal;
+  margin: 16px 16px 8px;
+}
+
+.swiper-title span {
+  font-size: 16px;
+}
+
+.works-title-underline {
+  background:linear-gradient(transparent 70%, #e5aab4 0%);
+}
+
+.mockup-image {
+  transition: transform .4s ease;
+}
+.mockup-image:hover {
+  transform: scale(1.1);
+}
+
+.item p + p {
+  margin-top: 24px;
+}
+
+.category {
+  font-size: 12px;
+  text-align: left;
+  margin-left: 16px;
+  line-height: 1.6;
+  color: #858585;
+  opacity: 0.8;
+  /* padding: 0 16px; */
+}
+
+.swiper-text {
+  padding: 0 16px 16px;
+  text-align: left;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 0 0 10px !important;
+  background: #333 !important;
+}
+
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px; /* ボタンの幅 */
+  height: 56px; /* ボタンの高さ */
+  background-size: 40px 56px; /* 表示したいサイズ */
+  /* width: 24px; ボタンの幅 */
+  /* height: 40px; ボタンの高さ */
+  /* background-size: 24px 40px; 表示したいサイズ */
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+/* 次ページボタンのスタイル */
+.swiper-button-next {
+background-image: url('../img/icon-next.png');
+cursor: none;
+}
+
+#cursor.hover {
+  top: -26px;    /* 大きくなった分の座標調節 */
+  left: -26px;   /* 大きくなった分の座標調節 */
+  width: 60px;   /* カーソルの直径 */
+  height: 60px;  /* カーソルの直径 */
+  color:rgba(110, 149, 83, 1);
+  background: rgba(193,205,117,0.75);
+  line-height: 60px;
+}
+
+/* 前ページボタンのスタイル */
+.swiper-button-prev {
+  background-image: url('../img/icon-next.png');
+  transform: translateY(-50%) scale(-1, 1); /* 左右反転 */
+  cursor: none;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+ display: none;
+}
+
+#works .link-btn {
+  margin: 80px auto 0;
+}
+
+#cursor {
+  transform: translate(0,0);
+  pointer-events: none;
+  position: fixed;
+  top: -4px;    /* 座標調節（カーソル位置と円の中心を合わせる） */
+  left: -4px;   /* 座標調節（カーソル位置と円の中心を合わせる） */
+  width: 8px;   /* カーソルの直径 */
+  height: 8px;  /* カーソルの直径 */
+  background: rgba(0,0,0,0.75);
+  border-radius: 50%;
+  z-index: 999;
+  /* transition: width .3s, height .3s, top .3s, left .3s; */
+  transition: all .3s;
+  line-height: 100px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#cursor.hov_ {
+  top: -46px;    /* 大きくなった分の座標調節 */
+  left: -46px;   /* 大きくなった分の座標調節 */
+  width: 100px;   /* カーソルの直径 */
+  height: 100px;  /* カーソルの直径 */
+  background: rgba(212,105,130,0.75);
+  color:rgba(133, 77, 96, 1);
+  line-height: 100px;
+}
+
+/* --------------------------
+        contact
+-----------------------------*/
+
+.contact-contents {
+  /* color: #87755E; */
+  background: url("../img/contact-bg.jpg");
+  background-size: cover;
+  background-position: left top;
+  /* background-position: 40% center; */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: #854C60;
+}
+
+.contact-contents::after{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.contact-contents .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-text {
+  padding-top: 88px;
+  padding-bottom: 40px;
+}
+
+.form-attention {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#contact span {
+  color: #FF0000;
+}
+
+form {
+  /* width: 100%; */
+  padding-bottom: 88px;
+}
+
+form p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+}
+
+label + label {
+  margin-top: 32px;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #7c7c7c;
+  border-radius: 4px;
+  width: 100%;
+  padding: 4px 8px;
+}
+
+textarea {
+  height: 96px;
+}
+
+button {
+  all: unset;
+  margin: 80px auto 0;
+}
