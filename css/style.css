@@ -38,12 +38,10 @@ li {
   margin: 0 auto;
   width: calc(100% - 16px * 2);
   max-width: 800px;
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
 }
 
 section {
-  /* padding-top: 80px;
-  padding-bottom: 80px; */
   width: 100%;
 }
 
@@ -80,7 +78,6 @@ p {
 .link-btn {
   background-color: #854C60;
   color: #fff;
-  
   border: 1px solid #854C60;
 }
 
@@ -89,12 +86,7 @@ p {
   color: #854C60;
 }
 
-/*========= CanvasレイアウトのためのCSS ===============*/
-/* .contents {
-  padding:300px 0;
-  text-align:center;
-  outline: 1px solid green;
-} */
+
 /*========= waveを描画するエリア設定 ===============*/
 .wave{
   width: 100%;
@@ -117,11 +109,9 @@ header {
   width: 100%;
   height: 100px;
   position: fixed;
-  /* background-color: rgba(255,255,255,0.8); */
   z-index: 10;
   display: flex;
   align-items: center;
-  /* outline: 1px solid red; */
 }
 
 /* ハンバーガーメニュー（閉じている時） */
@@ -165,12 +155,11 @@ header {
   width: 80%;
   background: url("../img/hero-bg.jpg");
   background-size: cover;
-  /* background-size: contain; */
-background-repeat: no-repeat;
-background-position: 40% center;
-border-top-right-radius: 60% 50%;
-border-bottom-right-radius: 60% 50%;
-animation: hero-img 7s forwards;
+  background-repeat: no-repeat;
+  background-position: 40% center;
+  border-top-right-radius: 60% 50%;
+  border-bottom-right-radius: 60% 50%;
+  animation: hero-img 7s forwards;
 }
 
 .hero-bg::after{
@@ -208,8 +197,7 @@ animation: hero-img 7s forwards;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
 }
 
 .site-title {
@@ -465,24 +453,7 @@ animation: hero-img 7s forwards;
   max-width: 800px;
   overflow: hidden;
   position: relative;
- /* outline: 1px solid red; */
 }
-
-/* #learn-more {
-  display: block;
-  text-decoration: none;
-  background-color: gray;
-  color:bisque;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  border-radius: 50%;
-  display: none;
-}
-
-#learn-more.show {
-  display: block;
-} */
 
 .swiper{
   padding:0 50px 50px 50px;
@@ -613,7 +584,6 @@ cursor: none;
   background: rgba(0,0,0,0.75);
   border-radius: 50%;
   z-index: 999;
-  /* transition: width .3s, height .3s, top .3s, left .3s; */
   transition: all .3s;
   line-height: 100px;
   text-align: center;
@@ -635,11 +605,9 @@ cursor: none;
 -----------------------------*/
 
 .contact-contents {
-  /* color: #87755E; */
   background: url("../img/contact-bg.jpg");
   background-size: cover;
   background-position: left top;
-  /* background-position: 40% center; */
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -714,3 +682,92 @@ button {
   all: unset;
   margin: 80px auto 0;
 }
+
+/* --------------------------
+        footer
+-----------------------------*/
+footer {
+  background-color: #87755E;
+  padding-bottom: 24px;
+}
+
+footer .container {
+  padding-top: 88px;
+}
+
+.footer-nav ul {
+  width: 100%;
+}
+
+.footer-nav li {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer-nav li + li {
+  margin-top: 24px;
+}
+
+.footer-nav li a {
+  width: 104px;
+  height: 32px;
+  line-height: 30px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #87755E;
+  border: 1px solid #87755E;
+}
+
+.footer-nav li a:hover {
+  background-color: #87755E;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.footer-icons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons li + li {
+  margin-left: 24px;
+}
+
+.footer-icons i {
+  color: #fff;
+  font-size: 30px;
+  transition: color .3s;
+}
+
+.footer-icons i:hover {
+  color: #E5AAB4;
+}
+
+
+.footer-text {
+  margin-top: 56px;
+  margin-left: 8px;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #fff;
+}
+
+.footer-subtitle {
+  color:#fff;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+small {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 40px;
+  text-align: center;
+}
+
