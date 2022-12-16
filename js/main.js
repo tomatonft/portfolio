@@ -91,7 +91,8 @@ function draw(canvas, color) {
 function drawWave(canvas, color, alpha, zoom, delay) {
   var context = canvas.contextCache;
     context.strokeStyle = color;//線の色
-  context.lineWidth = 1;//線の幅
+  context.lineWidth = 0.5;//線の幅
+  // context.lineWidth = 1;//線の幅
     context.globalAlpha = alpha;
     context.beginPath(); //パスの開始
     drawSine(canvas, info.t / 0.5, zoom, delay);
