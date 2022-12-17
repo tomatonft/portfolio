@@ -24,7 +24,7 @@
       const href= anchors[i].getAttribute("href");
 
       // topに戻る以外のアンカー
-      if (href !== '#top') {
+      if (href !== '#') {
 
         // スクロール先の要素を取得 （アンカーの リンク先 #.. の # を取り除いた名前と一致する id名の要素）
         const target = document.getElementById(href.replace('#', ''));
@@ -265,6 +265,23 @@ for (let i = 0; i < linkElem.length; i++) {
         cursor.classList.remove('hov_');      
         cursor.textContent = '';
     });
+}
+
+
+//スマホ表示はカーソルをdefaultにする
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+const a = document.querySelectorAll('a');
+
+if (window.innerWidth < 429) {
+  cursor.style.visibility = 'hidden';
+  html.style.cursor = 'default';
+  body.style.cursor = 'default';
+  for (let i = 0; i < a.length; i++) {
+    a[i].style.cursor = 'default';
+  }
+} else {
+  cursor.style.visibility = 'visible';
 }
 
 

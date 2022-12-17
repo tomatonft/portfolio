@@ -9,7 +9,8 @@
 }
 
 html,body,a {
-  cursor: none; /* カーソル非表示 */
+  cursor: none; 
+  /* カーソル非表示 */
 }
 
 html {
