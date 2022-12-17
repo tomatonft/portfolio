@@ -1,13 +1,80 @@
 'use strict';
 
 {
-  /* スマホでの100vhの見え方の違いを調節（#main-visual) */
+  // ----------------
+  // スマホでの100vhの見え方の違いを調節（hero) 
+  // ----------------
   let vh = window.innerHeight * 0.01;
   
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+  // ----------------
+  // スムーススクロール
+  // ----------------
+  const anchors = document.querySelectorAll('a[href^="#"]'); 
+  const header = document.querySelector('header').offsetHeight; //header高さ
+  const urlHash = location.hash; // URLのアンカー（#以降の部分）を取得
 
+    // 各 anchor にクリックイベント
+    for ( let i = 0; i < anchors.length; i++ ) {
+      anchors[i].addEventListener('click', (e) => {
+        e.preventDefault();  //デフォルトのクリックイベント無効化
+
+      // 各 anchor の href属性取得
+      const href= anchors[i].getAttribute("href");
+
+      // topに戻る以外のアンカー
+      if (href !== '#top') {
+
+        // スクロール先の要素を取得 （アンカーの リンク先 #.. の # を取り除いた名前と一致する id名の要素）
+        const target = document.getElementById(href.replace('#', ''));
+
+        // スクロール先の要素の位置を取得
+        const position = window.pageYOffset + target.getBoundingClientRect().top;
+        
+
+        // スクロールアニメーション
+        window.scroll({
+          top: position,      // スクロール先要素の左上までスクロール
+          behavior: 'smooth'  // スクロールアニメーション
+        });
+
+      // topに戻る
+      } else {
+        // スクロールアニメーション
+        window.scroll({
+          top: 0,  // スクロール先
+          behavior: 'smooth'    // スクロールアニメーション
+        });
+      }
+    });
+  }
+
+  // ----------------
+  //  ハンバーガ―メニュー 
+  // ----------------
+  const hamburger = document.getElementById('hamburger');
+  const navi = document.getElementById('navi');
+  const menu = document.querySelectorAll("ul.menu a");
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navi.classList.toggle('active');
+    for (let i = 0; i <= 4; i++) {
+      menu[i].classList.toggle('active');
+    }
+  });
+
+  for (let i = 0; i <= 4; i++) {
+    menu[i].addEventListener('click', () => {
+      navi.classList.remove('active');
+      hamburger.classList.toggle('active');
+    });
+  }
+
+// ----------------
 // canvasによる波線複数描画
+// ----------------
 var unit = 100,
     canvasList, // キャンバスの配列
     info = {}, // 全キャンバス共通の描画情報
@@ -125,7 +192,9 @@ function drawSine(canvas, t, zoom, delay) {
 
 init();
 
+// ----------------
 // slider
+// ----------------
 const mySwiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
@@ -156,7 +225,27 @@ const mySwiper = new Swiper('.swiper', {
   });
 
 
-//準備
+
+
+const swiperBtns = document.querySelectorAll('.swiper-buttons > div');
+for (let i = 0; i < swiperBtns.length; i++) {
+  swiperBtns[i].addEventListener('mouseover', function (e) {
+      cursor.classList.add('hover');
+      if (swiperBtns[i].className === 'swiper-button-prev') {
+        cursor.textContent = 'Prev';
+      } else {
+        cursor.textContent = 'Next';
+      }
+  });
+  swiperBtns[i].addEventListener('mouseout', function (e) {
+      cursor.classList.remove('hover');      
+      cursor.textContent = '';
+  });
+}
+
+// -----------
+//カーソル変化
+// -----------
 let cursorR = 4;  //カーソルの半径
 const cursor = document.getElementById('cursor');  //カーソル用のdivを取得
 
@@ -176,22 +265,6 @@ for (let i = 0; i < linkElem.length; i++) {
         cursor.classList.remove('hov_');      
         cursor.textContent = '';
     });
-}
-
-const swiperBtns = document.querySelectorAll('.swiper-buttons > div');
-for (let i = 0; i < swiperBtns.length; i++) {
-  swiperBtns[i].addEventListener('mouseover', function (e) {
-      cursor.classList.add('hover');
-      if (swiperBtns[i].className === 'swiper-button-prev') {
-        cursor.textContent = 'Prev';
-      } else {
-        cursor.textContent = 'Next';
-      }
-  });
-  swiperBtns[i].addEventListener('mouseout', function (e) {
-      cursor.classList.remove('hover');      
-      cursor.textContent = '';
-  });
 }
 
 
