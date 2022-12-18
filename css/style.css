@@ -116,7 +116,7 @@ header {
 
 /* ハンバーガーメニュー（閉じている時） */
 #hamburger {
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 30;
   width: 30px;
   margin-left: auto;
@@ -662,16 +662,6 @@ background-image: url('../img/icon-next.png');
 cursor: none;
 }
 
-#cursor.hover {
-  top: -26px;    /* 大きくなった分の座標調節 */
-  left: -26px;   /* 大きくなった分の座標調節 */
-  width: 60px;   /* カーソルの直径 */
-  height: 60px;  /* カーソルの直径 */
-  color:rgba(110, 149, 83, 1);
-  background: rgba(193,205,117,0.75);
-  line-height: 60px;
-}
-
 /* 前ページボタンのスタイル */
 .swiper-button-prev {
   background-image: url('../img/icon-next.png');
@@ -713,6 +703,16 @@ cursor: none;
   background: rgba(212,105,130,0.75);
   color:rgba(133, 77, 96, 1);
   line-height: 100px;
+}
+
+#cursor.hover {
+  top: -26px;    /* 大きくなった分の座標調節 */
+  left: -26px;   /* 大きくなった分の座標調節 */
+  width: 60px;   /* カーソルの直径 */
+  height: 60px;  /* カーソルの直径 */
+  color:rgba(110, 149, 83, 1);
+  background: rgba(193,205,117,0.75);
+  line-height: 60px;
 }
 
 /* --------------------------
@@ -886,3 +886,50 @@ small {
   text-align: center;
 }
 
+/* --------------------------
+        レスポンシブ
+-----------------------------*/
+/* medium screen */
+@media (min-width: 600px) {
+ 
+  
+  .site-title {
+    margin-left: calc(50% - 167px);
+    /* margin-left: 8px; */
+    margin-top: 30%;
+    /* margin-top: 180px; */
+    font-size: 24px;
+    /* font-size: 20px; */
+    /* line-height: 27px; */
+    /* font-weight: 600; */
+    /* color: #fff; */
+    /* opacity: 0; */
+    /* transform: translateX(-100%); */
+    /* animation: site-title 4s forwards 1s; */
+  }
+
+ .title-br {
+    display: none;
+  }
+  
+  .site-subtitle {
+    font-size: 20px;
+    /* font-size: 16px; */
+    /* font-weight: 400; */
+    /* color: #87755E; */
+    /* margin-bottom: 80px; */
+    /* text-shadow: 1px 1px 1px #fff; */
+    margin-left: 50%;
+    /* margin-left: 30%; */
+    /* opacity: 0; */
+    /* transform: translateY(100%); */
+    /* animation: site-subtitle 3s forwards 2s; */
+  }
+
+}
+
+/* large screen */
+@media (min-width: 800px) {
+
+
+}

@@ -225,8 +225,19 @@ const mySwiper = new Swiper('.swiper', {
   });
 
 
+// -----------
+//カーソル変化
+// -----------
+let cursorR = 4;  //カーソルの半径
+const cursor = document.getElementById('cursor');  //カーソル用のdivを取得
+
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+    cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});
 
 
+// swiper ボタンhover時の変化
 const swiperBtns = document.querySelectorAll('.swiper-buttons > div');
 for (let i = 0; i < swiperBtns.length; i++) {
   swiperBtns[i].addEventListener('mouseover', function (e) {
@@ -243,18 +254,7 @@ for (let i = 0; i < swiperBtns.length; i++) {
   });
 }
 
-// -----------
-//カーソル変化
-// -----------
-let cursorR = 4;  //カーソルの半径
-const cursor = document.getElementById('cursor');  //カーソル用のdivを取得
-
-//上記のdivタグをマウスに追従させる処理
-document.addEventListener('mousemove', function (e) {
-    cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-});
-
-//リンクにホバー時はクラスをつける
+// swiper リンクhover時の変化
 const linkElem = document.querySelectorAll('.item > a');
 for (let i = 0; i < linkElem.length; i++) {
     linkElem[i].addEventListener('mouseover', function (e) {
@@ -266,6 +266,20 @@ for (let i = 0; i < linkElem.length; i++) {
         cursor.textContent = '';
     });
 }
+
+// hamburger hover時の変化
+hamburger.addEventListener('mouseover', function (e){
+  cursor.classList.add('hover');
+  cursor.textContent = 'Menu';
+  if (hamburger.className === 'active') {
+    cursor.textContent = 'Close';
+  }
+});
+
+hamburger.addEventListener('mouseout', function (e){
+  cursor.classList.remove('hover');      
+  cursor.textContent = '';
+});
 
 
 //スマホ表示はカーソルをdefaultにする
