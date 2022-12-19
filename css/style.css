@@ -112,6 +112,7 @@ header {
   z-index: 10;
   display: flex;
   align-items: center;
+  
 }
 
 /* ハンバーガーメニュー（閉じている時） */
@@ -129,6 +130,7 @@ header {
   width: 30px;
   height: 2px;
   background-color: #C1CD75;
+  box-shadow: 1px 1px 2px #fff;
   transition: all .3s;
 }
 
@@ -148,6 +150,10 @@ header {
 
 #hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(135deg);
+}
+
+.header-nav {
+  display: none;
 }
 
 #navi {
@@ -188,7 +194,7 @@ header {
   margin-top: 8px;
 }
 
-.menu li {
+#navi > .menu li {
   transform: translateY(100%);
   opacity: 0;
   transition:opacity .3s, transform .3s;
@@ -891,21 +897,15 @@ small {
 -----------------------------*/
 /* medium screen */
 @media (min-width: 600px) {
- 
   
+  p {
+    line-height: 2.9;
+  }
+
   .site-title {
     margin-left: calc(50% - 167px);
-    /* margin-left: 8px; */
     margin-top: 30%;
-    /* margin-top: 180px; */
     font-size: 24px;
-    /* font-size: 20px; */
-    /* line-height: 27px; */
-    /* font-weight: 600; */
-    /* color: #fff; */
-    /* opacity: 0; */
-    /* transform: translateX(-100%); */
-    /* animation: site-title 4s forwards 1s; */
   }
 
  .title-br {
@@ -914,22 +914,81 @@ small {
   
   .site-subtitle {
     font-size: 20px;
-    /* font-size: 16px; */
-    /* font-weight: 400; */
-    /* color: #87755E; */
-    /* margin-bottom: 80px; */
-    /* text-shadow: 1px 1px 1px #fff; */
     margin-left: 50%;
-    /* margin-left: 30%; */
-    /* opacity: 0; */
-    /* transform: translateY(100%); */
-    /* animation: site-subtitle 3s forwards 2s; */
+  }
+
+  .section-title {
+    font-size: 24px;
+    top: calc(50% - 13.5px);
+    left: 5%;
+  }
+
+  .about-profile-photo {
+    width: 30%;
+    margin-right: 5%;
+  }
+  
+  .letter {
+    width: 30%;
+    margin-left: auto;
+    margin-right:25%;
+  }
+  
+
+  .about-text {
+    padding: 104px 32px 104px 32px;
+    width: 70%;
+    border-radius: 16px;
+    transform: translateX(0) translateY(-88px);
+}
+
+  .about-profile {
+    font-size: 20px;
+  }
+
+  .about-details {
+    font-size: 16px;
+  }
+
+  .about-text .link-btn {
+    transform: translateY(124px);
   }
 
 }
 
 /* large screen */
-@media (min-width: 800px) {
+@media (min-width: 880px) {
+  
+  .site-title {
+     margin-right: 10%;
+  }
 
+  .site-subtitle {
+    margin-left: auto;
+  }
 
 }
+
+/* .header-navの表示 */
+@media (min-width: 1020px) {
+  #hamburger {
+    display: none;
+  }
+
+  .header-nav {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 5%;
+  }
+
+  .header-nav li + li {
+    margin-top: 16px;
+  }
+  
+  .header-nav li a {
+    font-size: 20px;
+  }
+
+}
+  
