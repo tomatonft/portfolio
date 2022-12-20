@@ -203,7 +203,7 @@ const mySwiper = new Swiper('.swiper', {
   breakpoints: {
     // 768px以上の場合
     768: {
-      slidesPerView: 2.1
+      slidesPerView: 2.3
     }
   },
     // If we need pagination
