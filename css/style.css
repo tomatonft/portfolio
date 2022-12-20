@@ -888,7 +888,7 @@ footer .container {
 .footer-title {
   font-size: 16px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 1.6;
   color: #fff;
 }
 
@@ -896,6 +896,7 @@ footer .container {
   color:#fff;
   font-weight: 400;
   line-height: 1.6;
+  margin-top: 8px;
 }
 
 small {
@@ -989,13 +990,48 @@ small {
 
   .contact-text {
     padding-top: 120px;
-    /* padding-bottom: 40px; */
   }
 
   form {
-    /* width: 100%; */
     padding-bottom: 120px;
   }
+
+  footer .container {
+    padding-top: 120px;
+  }
+
+  .footer-nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .footer-nav li {
+    width: fit-content;
+    margin: 0;
+  }
+  
+  .footer-nav li + li {
+    margin-top: 0px;
+    margin-left: 16px;
+  }
+  
+  .footer-icons {
+    justify-content: flex-end;
+  }
+  
+  .footer-title {
+    font-size: 20px;
+  }
+  
+  .footer-subtitle {
+    font-size: 18px;
+  }
+  
+  small {
+    font-size: 14px;
+    margin-top: 80px;
+  }
+  
 }
 
 /* large screen */

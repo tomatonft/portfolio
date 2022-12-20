@@ -298,5 +298,28 @@ if (window.innerWidth < 429) {
   cursor.style.visibility = 'visible';
 }
 
+// const element = document.getElementById('scroll-area');
+// const clientHeight = body.clientHeight;
+// const scrollHeight = body.scrollHeight;
+// body.onscroll = function() {
+//   if (scrollHeight - (clientHeight + this.scrollTop) === 0) {
+//     console.log('一番下です！');
+//   }
+// };
+
+const allHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+);
+const mostBottom = allHeight - window.innerHeight;
+window.addEventListener('scroll', ()=> {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop >= mostBottom) {
+        // 最下部に到達したときに実行する処理
+        // console.log('一番下です！');
+        
+    }
+});
 
 }
