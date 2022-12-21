@@ -374,14 +374,27 @@ header {
   }
 }
 
+.scroll-bar {
+  position: fixed;
+  right: 8px;
+  bottom: 0;
+}
+
 .scroll {
   display: block;
   color: #87755E;
   position: relative;
   width: fit-content;
   margin-left: auto;
-  margin-right: 16px;
+  margin-right: 0;
   transform: translateY(-190px) rotate(90deg);
+  opacity: 1;
+  transition: all .3s;
+}
+
+.scroll.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .scroll::after {
@@ -389,28 +402,32 @@ header {
   position: absolute;
   width: 88px;
   height: 2px;
-  /* background: linear-gradient(to right,#87755E, #fff); */
   background-color: #87755E;
   top: calc(50% - 1px);
   left: 54px;
-  /* right: 16px; */
-  /* animation: scroll 2s infinite; */
+  opacity: 0;
+  animation: scroll 2s ease-in-out infinite;
 }
 
-/* @keyframes scroll {
+@keyframes scroll {
   from {
-    background: linear-gradient(to right,#87755E, #fff);
+    width: 0;
+    opacity: 0;
+    left: 54px;
   }
 
-  50% {
-    background: linear-gradient(to right,#fff, #87755E);
-
+  30% {
+    width: 88px;
+    opacity: 1;
+    left: 54px;
   }
 
   to {
-    background: linear-gradient(to right,#87755E, #fff);
+    width: 0;
+    opacity: 0;
+    left: 142px;
   }
-} */
+}
 
 /* --------------------------
         about
@@ -1045,6 +1062,10 @@ small {
     margin-left: auto;
   }
 
+  .scroll {
+    margin-right: 16px;
+  }
+
   .skills-contents .container {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -1087,10 +1108,13 @@ small {
     position: absolute;
     top: 100px;
     right: 5%;
+    opacity: 1;
+    transition: all .3s;
   }
 
   #header-nav.hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
   #header-nav li + li {
@@ -1100,6 +1124,8 @@ small {
   #header-nav li a {
     font-size: 20px;
   }
+
+  
 
 }
   
