@@ -152,7 +152,7 @@ header {
   transform: translateY(-8px) rotate(135deg);
 }
 
-.header-nav {
+#header-nav {
   display: none;
 }
 
@@ -1082,18 +1082,22 @@ small {
     display: none;
   }
 
-  .header-nav {
+  #header-nav {
     display: block;
     position: absolute;
     top: 100px;
     right: 5%;
   }
 
-  .header-nav li + li {
+  #header-nav.hidden {
+    display: none;
+  }
+
+  #header-nav li + li {
     margin-top: 16px;
   }
   
-  .header-nav li a {
+  #header-nav li a {
     font-size: 20px;
   }
 

@@ -298,28 +298,21 @@ if (window.innerWidth < 429) {
   cursor.style.visibility = 'visible';
 }
 
-// const element = document.getElementById('scroll-area');
-// const clientHeight = body.clientHeight;
-// const scrollHeight = body.scrollHeight;
-// body.onscroll = function() {
-//   if (scrollHeight - (clientHeight + this.scrollTop) === 0) {
-//     console.log('一番下です！');
-//   }
-// };
 
-const allHeight = Math.max(
-  document.body.scrollHeight, document.documentElement.scrollHeight,
-  document.body.offsetHeight, document.documentElement.offsetHeight,
-  document.body.clientHeight, document.documentElement.clientHeight
-);
-const mostBottom = allHeight - window.innerHeight;
-window.addEventListener('scroll', ()=> {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop >= mostBottom) {
-        // 最下部に到達したときに実行する処理
-        // console.log('一番下です！');
-        
-    }
-});
+// -----------
+//  header-navを最下部で非表示にする
+// -----------
+const bodyHeight = document.body.clientHeight // bodyの高さを取得
+const windowHeight = window.innerHeight // windowの高さを取得
+const bottomPoint = bodyHeight - windowHeight - header; // ページ最下部までスクロールしたかを判定するための位置を計算(headerが浮いているため追加で引く)
+const headerNav = document.getElementById('header-nav');
 
+window.addEventListener('scroll', () => {
+  const currentPos = window.pageYOffset // スクロール量を取得
+  if (bottomPoint <= currentPos) { // スクロール量が最下部の位置を過ぎたかどうか
+    headerNav.classList.add('hidden');
+  } else {
+    headerNav.classList.remove('hidden');
+  }
+})
 }
