@@ -55,14 +55,12 @@
   // ----------------
   const hamburger = document.getElementById('hamburger');
   const navi = document.getElementById('navi');
-  const menu = document.querySelectorAll("ul.menu a");
+  // const menu = document.querySelectorAll("ul.menu a");
+  const menu = document.querySelectorAll("ul.hamburger-menu a");
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navi.classList.toggle('active');
-    for (let i = 0; i <= 4; i++) {
-      menu[i].classList.toggle('active');
-    }
   });
 
   for (let i = 0; i <= 4; i++) {
@@ -71,6 +69,27 @@
       hamburger.classList.toggle('active');
     });
   }
+
+// hamburger.addEventListener('click', () => {
+//   hamburgerMenu();
+// });
+
+// for (let i = 0; i <= 4; i++) {
+//   menu[i].addEventListener('click', () => {
+//     hamburgerMenu();
+//   });
+// }
+
+// function hamburgerMenu() {
+//   hamburger.classList.toggle('active');
+
+//   if (hamburger.className === 'active') {
+//     navi.classList.add('active');
+//   } else {
+//     navi.classList.remove('active');
+//   }
+// }
+
 
 // ----------------
 // canvasによる波線複数描画
