@@ -44,6 +44,7 @@ li {
 
 section {
   width: 100%;
+  overflow: hidden;
 }
 
 p {
@@ -85,6 +86,44 @@ p {
 .link-btn:hover {
   background-color: #fff;
   color: #854C60;
+}
+
+/*========= 交差監視API =========*/
+.animate {
+  opacity: 0;
+  transition: all 0.8s;
+ }
+ 
+.animate.from-left {
+ transform: translateX(-20%);
+}
+
+.animate.from-right {
+  transform: translateX(20%) translateY(-32px);
+}
+
+.animate.from-bottom {
+  transform: translateY(20%);
+}
+
+.letter.animate.from-bottom.appear {
+  opacity: 1;
+  transform: translateY(-64px);
+}
+
+.skills-web.animate.from-left.appear {
+  opacity: 1;
+  transform: translateX(-16px);
+}
+
+.skills-others.animate.from-right.appear {
+  opacity: 1;
+  transform: translateX(16px) translateY(-32px);
+}
+
+.animate.appear {
+ opacity: 1;
+ transform: none;
 }
 
 /*========= waveを描画するエリア設定 ===============*/
