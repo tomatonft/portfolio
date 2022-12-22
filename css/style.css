@@ -39,7 +39,6 @@ li {
   margin: 0 auto;
   width: calc(100% - 16px * 2);
   max-width: 800px;
-  /* outline: 1px solid green; */
 }
 
 section {
@@ -62,8 +61,6 @@ p {
   position: absolute;
   top: calc(50% - 10px);
   left: 24px;
-  /* margin: 0 auto;
-  max-width: 800px; */
 }
 
 .button {
@@ -93,6 +90,18 @@ p {
   opacity: 0;
   transition: all 0.8s;
  }
+
+ .animate.from-bottom {
+  transform: translateY(20px);
+}
+
+.letter.animate.from-bottom {
+  transform: translateY(-44px);
+}
+
+.letter.animate.from-bottom.appear {
+  transform: translateY(-64px);
+}
  
 .animate.from-left {
  transform: translateX(-20%);
@@ -102,29 +111,18 @@ p {
   transform: translateX(20%) translateY(-32px);
 }
 
-.animate.from-bottom {
-  transform: translateY(20%);
-}
-
-.letter.animate.from-bottom.appear {
-  opacity: 1;
-  transform: translateY(-64px);
-}
-
 .skills-web.animate.from-left.appear {
-  opacity: 1;
   transform: translateX(-16px);
 }
 
 .skills-others.animate.from-right.appear {
-  opacity: 1;
   transform: translateX(16px) translateY(-32px);
 }
 
 .animate.appear {
- opacity: 1;
- transform: none;
-}
+  opacity: 1;
+  transform: none;
+ }
 
 /*========= waveを描画するエリア設定 ===============*/
 .wave{
@@ -268,7 +266,6 @@ header {
   color: #87755E;
   font-size: 18px;
   position: relative;
-  /* transition: all .3s; */
 }
 
 .menu li a::before {
@@ -302,7 +299,6 @@ header {
   position: relative;
   margin-bottom: 88px;
   width: 100%;
-  
 }
 
 .hero-bg {
@@ -484,7 +480,6 @@ header {
   border-radius: 16px;
   display: block;
   position: relative;
-  /* width: 100%; */
 }
 
 .about-profile-photo {
@@ -558,8 +553,7 @@ header {
 }
 
 .skills-contents .container {
-  padding-top: 88px;
-  padding-bottom: 88px;
+  padding: 88px 0;
 }
 
 .skills-contents li {
@@ -635,29 +629,25 @@ header {
 }
 
 .swiper-wrapper {
-  /* wrapperのサイズを調整 */
   width: 100%;
-  /* height: 100%; */
   display: flex;
 }
 
 .swiper-slide {
-  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
   color: #87755E;
   width: 100%;
   height: auto;
-  /* height: 100%; */
   text-align: center;
   padding-top: 24px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column; /* 子要素を縦並べ */
+  flex-direction: column;
 }
 
 .item {
-  flex-grow: 1; /* 余白の割り当て */
+  flex-grow: 1;
 }
 
 .swiper-title {
@@ -677,6 +667,7 @@ header {
 .mockup-image {
   transition: transform .4s ease;
 }
+
 .mockup-image:hover {
   transform: scale(1.1);
 }
@@ -692,7 +683,6 @@ header {
   line-height: 1.6;
   color: #858585;
   opacity: 0.8;
-  /* padding: 0 16px; */
 }
 
 .swiper-text {
@@ -715,7 +705,11 @@ header {
   margin: 0 !important;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets
+.swiper-pagination-horizontal, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction {
   bottom: 0px;
 }
 
@@ -724,9 +718,6 @@ header {
   width: 40px; /* ボタンの幅 */
   height: 56px; /* ボタンの高さ */
   background-size: 40px 56px; /* 表示したいサイズ */
-  /* width: 24px; ボタンの幅 */
-  /* height: 40px; ボタンの高さ */
-  /* background-size: 24px 40px; 表示したいサイズ */
   transform: translateY(-50%);
   margin-top: 0;
   z-index: 9;
@@ -837,7 +828,6 @@ cursor: none;
 }
 
 form {
-  /* width: 100%; */
   padding-bottom: 88px;
 }
 
@@ -935,7 +925,6 @@ footer .container {
   color: #E5AAB4;
 }
 
-
 .footer-text {
   margin-top: 56px;
   margin-left: 8px;
@@ -1010,7 +999,6 @@ small {
     margin-right:25%;
   }
   
-
   .about-text {
     padding: 104px 32px 104px 32px;
     width: 70%;
@@ -1086,8 +1074,7 @@ small {
   small {
     font-size: 14px;
     margin-top: 80px;
-  }
-  
+  } 
 }
 
 /* large screen */
@@ -1133,7 +1120,6 @@ small {
     gap: 40px;
     margin-top: 80px;
   }
-
 }
 
 /* .header-navの表示 */
@@ -1163,8 +1149,5 @@ small {
   #header-nav li a {
     font-size: 20px;
   }
-
-  
-
 }
   
