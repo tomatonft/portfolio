@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noriko Tomita Portfolio</title>
+  <title>Noriko Tomita Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Trispace:wght@400;500;600&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
@@ -14,17 +14,177 @@
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1 class="header-title title">
-        Noriko Tomita<br>Portfolio
-       </h1>
-       <p class="header-subtitle title">- より多くの人に届ける -</p>
+      <div class="header-title">
+        <h1 class="title">
+          Noriko Tomita<br>Portfolio
+         </h1>
+         <p class="header-subtitle title">- より多くの人に届ける -</p>
+      </div>
+
+       <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+
+    <nav id="navi">
+      <div class="container">
+        <h1 class="nav-title title">
+          Noriko Tomita<br>Portfolio
+         </h1>
+         <p class="nav-subtitle title">- より多くの人に届ける -</p>
+        <ul class="menu hamburger-menu">
+          <li><a class="" href="../index.html">Home</a></li>
+          <li><a class="" href="../index.html#about">About</a></li>
+          <li><a class="" href="../index.html#skills">Skills</a></li>
+          <li><a class="" href="../index.html#works">Works</a></li>
+          <li><a class="" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <main>
+    <section id="profile-details">
+      <div class="wave">
+        <canvas></canvas>
+        <h2 class="section-title title">Profile</h2>
+      </div>
+
+      <div class="profile-contents">
+        <div class="container">
+          <div class="profile-photo">
+            <img src="img/profile-img.jpg" alt="" srcset="">
+          </div>
+
+          <div class="profile-text">
+            <h3>冨田　典子</h3>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+                <i class="bi bi-file-music"></i>
+              </div>
+              <p>
+                1982年生まれ。既成曲を演奏することより、自作曲を演奏することに魅力を感じ、作曲の道を志しました。
+              </p>
+            </div>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+               <i class="bi bi-globe-europe-africa"></i>
+              </div>
+              <p>
+                2004年、東京藝術大学音楽学部を卒業後、幅広い視野を持つことと、音楽だけでなく英語も学びたく、文化庁新進芸術家海外留学制度2年派遣研修員としてイギリス留学も経験しました。
+              </p>
+            </div>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+               <i class="bi bi-briefcase"></i>
+              </div>
+              <p>
+                帰国後は、学んできたことを活かして作品発表や演奏会の企画、中高一貫校での音楽の講師として仕事をしました。
+              </p>
+            </div>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+               <i class="bi bi-question-circle"></i>
+              </div>
+              <p>
+                Web制作に興味を持ったきっかけは、長女が小学校入学前に、プログラミング教育必修化のニュースを見たことでした。
+              </p>
+            </div>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+               <i class="bi bi-lightbulb"></i>
+              </div>
+              <p>
+                これからの子どもたちはプログラミング的思考力を身につける必要があることや、プログラミングの知識はWebサイトの制作や、アプリなど、身近にある様々なサービスの開発に繋がっていることを改めて学び、興味を持ちました。
+              </p>
+            </div>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+               <i class="bi bi-pc-display-horizontal"></i>
+              </div>
+              <p>
+                また、Web制作の知識や技術は、身につけると音楽教室や演奏会の宣伝で力になれることに魅力を感じました。一から企画し、Webサイトを作り出してメッセージを伝えるところは作曲と共通点を感じています。
+              </p>
+            </div>
+            <div class="profile-details">
+              <div class="profile-text-icon">
+               <i class="bi bi-people"></i>
+              </div>
+              <p>
+                今後はWeb制作を通してお客様のご要望に寄り添い、より多くの人々に声や想いをお届けしていきたいです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="strength">
+      <div class="wave">
+        <canvas></canvas>
+        <h2 class="section-title title">Strength</h2>
+      </div>
+
+      <div class="strength-contents">
+        <div class="container">
+         <h3>私の3つの強み</h3>
+
+          <ul class="strength-lists">
+            <li>
+              <img src="img/strength-1.jpg" alt="">
+              <h4>
+                <span class="strength-number">01</span>
+                <span class="strength-list-underline">
+                コミュニケーション力
+                </span>
+              </h4>
+              <p>
+                音楽活動は、多くの人々と関わりながら、円滑なコミュニケーションを常に意識して活動を行ってきました。<br>
+                音楽講師としての仕事も、学校の方針を理解し、周囲の先生方と連携し、音楽教育の面からどのように学校に貢献できるかを常に考えて行動していました。<br>
+                これらの経験は、お客さまのご要望を汲み取ったり、お仕事をさせていただく周囲の皆さまとコミュニケーションを取りながら制作物を作り上げていくときに活かせるのではないかと考えています。
+                </p>
+            </li>
+            <li>
+              <img src="img/strength-2.jpg" alt="">
+              <h4>
+                <span class="strength-number">02</span>
+                <span class="strength-list-underline">
+                柔軟性
+                </span>
+              </h4>
+              <p>
+                2年間のイギリス留学では、新しい環境に試行錯誤しながらも柔軟に対応しながら生活しました。<br>
+                お仕事の中で未知の問題に直面したときにどのようにしたら成果を上げることができるか粘り強く考えて行動できるのではないかと思っています。
+              </p>
+            </li>
+            <li>
+              <img src="img/strength-3.jpg" alt="">
+              <h4>
+                <span class="strength-number">03</span>
+                <span class="strength-list-underline">
+                正確性
+                </span>
+              </h4>
+              <p>
+                楽譜の制作や教材作りは細かい作業がとても多く、見ていただく方々に正確に意図が伝わるよう細部までこだわって作っていました。<br>
+                Web制作において、コードや文章に間違いや、使いづらさがないか確認、修正する作業も粘り強く取り組むことができます。
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="questionnaire">
+      <div class="wave">
+        <canvas></canvas>
+        <h2 class="section-title title">Questionnaire</h2>
+      </div>
+    </section>
 
   </main>
 

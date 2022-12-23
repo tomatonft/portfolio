@@ -1,0 +1,153 @@
+
+
+html,body,a {
+  cursor: auto; 
+
+}
+
+body {
+  color: #4a4a4a;
+}
+/* --------------------------
+        header
+-----------------------------*/
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title h1 {
+  font-size: 16px;
+  color: #854C60;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-size: 14px;
+  color: #854C60;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* --------------------------
+        profile
+-----------------------------*/
+
+main {
+  padding-top: 100px;
+}
+
+.profile-contents {
+  padding-bottom: 80px;
+}
+
+.profile-photo {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-text {
+  background-color: rgba(240, 206, 211, 0.2);
+  transform: translateX(-16px) translateY(-64px);
+  padding: 128px 16px 80px 16px;
+}
+
+.profile-text > div + div {
+  margin-top: 32px;
+}
+
+.profile-text h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 64px;
+  /* padding-top: 128px; */
+  padding-left: 16px;
+}
+
+.profile-details {
+  display: flex;
+  position: relative;
+}
+
+.profile-details::after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  height: calc(100% - 8px);
+  /* height: calc(100% + 16px); */
+  width: 2px;
+  background-color: rgba(193, 205, 117, 0.75);
+}
+
+.profile-details:last-child::after {
+  display: none;
+}
+
+.profile-text-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(193, 205, 117, 0.75);
+  text-align: center;
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-text i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 40px;
+  z-index: 2;
+}
+
+.profile-details p {
+  flex: 1;
+  margin-left: 16px;
+}
+
+/* --------------------------
+        strength
+-----------------------------*/
+
+.strength-contents {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.strength-contents h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 64px;
+}
+
+.strength-lists li + li {
+  margin-top: 64px;
+}
+
+.strength-lists img {
+  border-radius: 16px;
+}
+
+.strength-lists h4 { 
+  margin-top: 24px;
+}
+
+.strength-number {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+.strength-list-underline {
+  font-size: 18px;
+  font-weight: 500;
+  background:linear-gradient(transparent 70%, #e5aab4 0%);
+}
+
+.strength-lists p {
+  margin-top: 16px;
+}

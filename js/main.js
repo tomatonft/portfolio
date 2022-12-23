@@ -82,7 +82,6 @@
   // ----------------
   const hamburger = document.getElementById('hamburger');
   const navi = document.getElementById('navi');
-  // const menu = document.querySelectorAll("ul.menu a");
   const menu = document.querySelectorAll("ul.hamburger-menu a");
 
   hamburger.addEventListener('click', () => {
@@ -96,27 +95,6 @@
       hamburger.classList.toggle('active');
     });
   }
-
-// hamburger.addEventListener('click', () => {
-//   hamburgerMenu();
-// });
-
-// for (let i = 0; i <= 4; i++) {
-//   menu[i].addEventListener('click', () => {
-//     hamburgerMenu();
-//   });
-// }
-
-// function hamburgerMenu() {
-//   hamburger.classList.toggle('active');
-
-//   if (hamburger.className === 'active') {
-//     navi.classList.add('active');
-//   } else {
-//     navi.classList.remove('active');
-//   }
-// }
-
 
 // ----------------
 // canvasによる波線複数描画
@@ -136,21 +114,12 @@ function init() {
     info.t = 0;
     canvasList = [];
     colorList = [];
-    // canvas1個めの色指定
-    canvasList.push(document.getElementById("waveCanvas1"));
-    colorList.push(['#E5AAB4', '#C1CD75', '#e5aab4', '#6e9452', '#baa298']);//重ねる波線の色設定
-    
-    // canvas2個めの色指定
-    canvasList.push(document.getElementById("waveCanvas2"));
-    colorList.push(['#E5AAB4', '#C1CD75', '#e5aab4', '#6e9452', '#baa298']);
-    
-    // canvas3個めの色指定
-    canvasList.push(document.getElementById("waveCanvas3"));
-    colorList.push(['#E5AAB4', '#C1CD75', '#e5aab4', '#6e9452', '#baa298']);
-
-    // canvas4個めの色指定
-    canvasList.push(document.getElementById("waveCanvas4"));
-    colorList.push(['#E5AAB4', '#C1CD75', '#e5aab4', '#6e9452', '#baa298']);
+   
+    const canvasWaves = document.querySelectorAll('canvas');
+    canvasWaves.forEach(canvasWave => {
+      canvasList.push(canvasWave);
+      colorList.push(['#E5AAB4', '#C1CD75', '#e5aab4', '#6e9452', '#baa298']);//重ねる波線の色設定
+    });
 
   
     // 各キャンバスの初期化
@@ -357,7 +326,6 @@ const scrollBar = document.querySelector('span.scroll');
 
 window.addEventListener('scroll', () => {
   const currentPos = window.pageYOffset // スクロール量を取得
-  console.log(currentPos);
   if (bottomPoint <= currentPos) { // スクロール量が最下部の位置を過ぎたかどうか
     headerNav.classList.add('hidden');
   } else {
