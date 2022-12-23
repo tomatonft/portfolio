@@ -11,6 +11,11 @@ body {
 /* --------------------------
         header
 -----------------------------*/
+
+header {
+  background-color:rgba(255,255,255,0.8);
+}
+
 header > .container {
   display: flex;
   justify-content: space-between;
