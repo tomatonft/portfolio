@@ -1,12 +1,16 @@
-
+@charset "utf-8";
 
 html,body,a {
   cursor: auto; 
-
 }
 
 body {
   color: #4a4a4a;
+}
+
+.profile-section-title {
+  font-size: 18px;
+  font-weight: 500;
 }
 /* --------------------------
         header
@@ -45,6 +49,7 @@ main {
 }
 
 .profile-contents {
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -65,10 +70,7 @@ main {
 }
 
 .profile-text h3 {
-  font-size: 18px;
-  font-weight: 500;
   margin-bottom: 64px;
-  /* padding-top: 128px; */
   padding-left: 16px;
 }
 
@@ -83,7 +85,6 @@ main {
   top: 48px;
   left: 20px;
   height: calc(100% - 8px);
-  /* height: calc(100% + 16px); */
   width: 2px;
   background-color: rgba(193, 205, 117, 0.75);
 }
@@ -119,13 +120,13 @@ main {
         strength
 -----------------------------*/
 
-.strength-contents {
-  padding-top: 64px;
-  padding-bottom: 64px;
+.strength-contents,
+.questionnaire-contents {
+  padding: 80px 0;
 }
-.strength-contents h3 {
-  font-size: 18px;
-  font-weight: 500;
+
+.strength-contents h3,
+.questionnaire-contents h3 {
   margin-bottom: 64px;
 }
 
@@ -156,3 +157,94 @@ main {
 .strength-lists p {
   margin-top: 16px;
 }
+
+/* --------------------------
+        questionnaire
+-----------------------------*/
+
+dl > div {
+  border: 1px solid #4a4a4a;
+  padding: 16px 8px;
+}
+
+dl > div + div {
+  margin-top: 32px;
+}
+
+dt {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 8px;
+}
+
+dd {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 16px 8px;
+  margin-top: 16px;
+  display: none;
+}
+
+.question-mark,
+.answer-mark {
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 16px;
+}
+
+.question-mark {
+  color: #fff;
+  background-color: rgb(193, 205, 117);
+}
+
+.answer-mark {
+  color: rgb(193, 205, 117);
+  background-color: #fff;
+  margin-top: 8px;
+}
+
+dt > p {
+  font-size: 16px;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.plus {
+  font-size: 24px;
+  color: #4a4a4a;
+  margin-left: 16px;
+  margin-right: 16px;
+  transition: transform .3s;
+}
+
+dd > p {
+  flex: 1;
+} 
+
+dl > div.appear dd {
+  display: flex;
+  animation: .3s fadeIn;
+}
+
+dl > div.appear .plus {
+  transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
