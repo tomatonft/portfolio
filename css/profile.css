@@ -49,8 +49,7 @@ main {
 }
 
 .profile-contents {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 80px 0;
 }
 
 .profile-photo {
@@ -86,7 +85,8 @@ main {
   left: 20px;
   height: calc(100% - 8px);
   width: 2px;
-  background-color: rgba(193, 205, 117, 0.75);
+  background-color: rgba(193, 205, 117, 1);
+  /* background-color: rgba(193, 205, 117, 0.75); */
 }
 
 .profile-details:last-child::after {
@@ -97,7 +97,8 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(193, 205, 117, 0.75);
+  background-color: rgba(193, 205, 117, 1);
+  /* background-color: rgba(193, 205, 117, 0.75); */
   text-align: center;
   margin-top: 8px;
   position: relative;
@@ -247,4 +248,99 @@ dl > div.appear .plus {
   }
 }
 
+/* --------------------------
+        レスポンシブ
+-----------------------------*/
+/* medium screen */
+@media (min-width: 600px) {
+  
+
+
+
+}
+
+/* large screen */
+@media (min-width: 880px) {
+  .profile-contents {
+    padding: 120px 0;
+  }
+  
+  .profile-photo {
+    width: calc(100% / 3);
+    margin-left: auto;
+  }
+
+  .profile-text {
+    width: 80%;
+    transform: translateX(0) translateY(-64px);
+    padding: 104px 32px 104px 32px;
+    position: relative;
+  }
+  
+  .profile-text > div + div {
+    margin-top: 64px;
+  }
+  
+  .profile-text h3 {
+    position: absolute;
+    top: -13.5px;
+    left: calc(50% - 45px);
+  }
+
+  .profile-details::after {
+    top: 38px;
+    left: 30px;
+    transform-origin: top;
+  }
+
+  .profile-details:nth-child(odd) {
+    margin-left: 144px;
+  }
+
+  .profile-details:nth-child(even)::after {
+    height: calc(100% + 90px);
+    transform: rotate(-42deg);
+  }
+  .profile-details:nth-child(6)::after {
+    height: calc(100% + 90px);
+    transform: rotate(-30deg);
+  }
+
+  .profile-details:nth-child(6) > p {
+    margin-left: 56px;
+  }
+
+  .profile-details:nth-child(3)::after {
+    height: calc(100% + 80px);
+    transform: rotate(30deg);
+  }
+  .profile-details:nth-child(5)::after {
+    height: calc(100% + 88px);
+    transform: rotate(35deg);
+  }
+  .profile-details:nth-child(7)::after {
+    height: calc(100% + 80px);
+    transform: rotate(25deg);
+  }
+
+  .profile-text-icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 8px;
+  }
+
+  .profile-text i {
+    font-size: 32px;
+    line-height: 60px;
+  }
+
+
+}
+
+/* .header-navの表示 */
+@media (min-width: 1020px) {
+
+
+}
+  
 
