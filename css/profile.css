@@ -184,6 +184,7 @@ dd {
   display: flex;
   background-color: #f0f0f0;
   padding: 16px 8px;
+  align-items: center;
   margin-top: 16px;
   display: none;
 }
@@ -207,7 +208,6 @@ dd {
 .answer-mark {
   color: rgb(193, 205, 117);
   background-color: #fff;
-  margin-top: 8px;
 }
 
 dt > p {
@@ -225,6 +225,7 @@ dt > p {
 }
 
 dd > p {
+  font-size: 14px;
   flex: 1;
 } 
 
@@ -254,8 +255,64 @@ dl > div.appear .plus {
 /* medium screen */
 @media (min-width: 600px) {
   
+  .profile-section-title {
+    font-size: 20px;
+  }
 
+  .profile-text > div + div {
+    margin-top: 64px;
+  }
 
+  .profile-text {
+    padding: 104px 32px 104px 32px;
+  }
+
+  .profile-text-icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 8px;
+  }
+
+  .profile-text i {
+    font-size: 32px;
+    line-height: 60px;
+  }
+
+  .profile-details::after {
+    top: 68px;
+    left: 30px;
+    height: calc(100% + 8px);
+  }
+
+  .strength-contents,
+  .questionnaire-contents {
+    padding: 120px 0;
+  }
+
+  .strength-lists li + li {
+    margin-top: 104px;
+  }
+
+  dl > div {
+    padding: 24px 16px;
+  }
+
+  .question-mark,
+  .answer-mark {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  dt > p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  dd > p {
+    font-size: 16px;
+  } 
 
 }
 
@@ -273,12 +330,7 @@ dl > div.appear .plus {
   .profile-text {
     width: 80%;
     transform: translateX(0) translateY(-64px);
-    padding: 104px 32px 104px 32px;
     position: relative;
-  }
-  
-  .profile-text > div + div {
-    margin-top: 64px;
   }
   
   .profile-text h3 {
@@ -323,18 +375,36 @@ dl > div.appear .plus {
     transform: rotate(25deg);
   }
 
-  .profile-text-icon {
-    width: 60px;
-    height: 60px;
-    margin-top: 8px;
+  .strength-lists li {
+    display: flex;
+    align-items: flex-start;
   }
 
-  .profile-text i {
-    font-size: 32px;
-    line-height: 60px;
+  .strength-lists img {
+    width: 30%;
   }
 
-
+  .strength-list-text {
+    margin-left: 48px;
+  }
+  
+  .strength-lists h4 { 
+    margin-top: 0;
+  }
+  
+  .strength-number {
+    font-size: 20px;
+    margin-right: 48px;
+  }
+  
+  .strength-list-underline {
+    font-size: 20px;
+  }
+  
+  .strength-lists p {
+    margin-top: 24px;
+    margin-left: 70.88px;
+  }
 }
 
 /* .header-navの表示 */
