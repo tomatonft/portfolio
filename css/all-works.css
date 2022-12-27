@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.works-contents {
+  /* background-image: url('../img/works-bg.png'); */
+  /* height: fit-content; */
+  /* padding-bottom: 88px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.works-list {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.works-list li + li {
+  margin-top: 80px;
+}
