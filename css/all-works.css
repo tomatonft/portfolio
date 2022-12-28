@@ -1,12 +1,5 @@
 @charset "utf-8";
 
-.works-contents {
-  /* background-image: url('../img/works-bg.png'); */
-  /* height: fit-content; */
-  /* padding-bottom: 88px; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-}
-
 .works-list {
   padding-top: 80px;
   display: flex;
@@ -17,3 +10,44 @@
 .works-list li + li {
   margin-top: 80px;
 }
+
+.works-contents .button {
+  margin: 80px auto 0;
+}
+
+/* --------------------------
+        レスポンシブ
+-----------------------------*/
+/* medium screen */
+@media (min-width: 600px) {
+  .works-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+  }
+
+  .works-list li {
+    width: calc((100% - 80px) / 2);
+  }
+
+  .works-list li + li {
+    margin-top: 0;
+  }
+ 
+}
+
+/* large screen */
+@media (min-width: 880px) {
+  .works-list li {
+    width: calc((100% - 160px) / 3);
+  }
+}
+
+/* .header-navの表示 */
+@media (min-width: 1020px) {
+
+
+}
+  
+
