@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+/* --------------------------
+        all-works
+-----------------------------*/
 .works-list {
   padding-top: 80px;
   display: flex;
@@ -14,6 +16,130 @@
 .works-contents .button {
   margin: 80px auto 0;
 }
+
+/* --------------------------
+        works共通
+-----------------------------*/
+
+.works-details-contents {
+  color: #87755E;
+  background-color: rgba(240, 206, 211, 0.2);
+  padding-top: 80px;
+}
+
+.works-title-top {
+  margin-bottom: 40px;
+}
+
+.works-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.works-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.works-title > .category {
+  margin-left: 0;
+}
+
+.visit-btn {
+  display: none;
+}
+
+.works-details-section-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.concept {
+  margin-top: 80px;
+}
+
+.works-details-text {
+  margin-left: 32px;
+  margin-top: 24px;
+}
+
+.design {
+  margin-top: 80px;
+}
+
+.colors-samples {
+  margin-top: 32px;
+}
+
+.color + .color {
+  margin-top: 40px;
+}
+
+.color {
+  color: rgba(133, 133, 133, 0.8);
+  font-size: 12px;
+  margin-left: 80px;
+  position: relative;
+}
+
+.color::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  top: -4.5px;
+  left: -48px;
+}
+
+.contents {
+  margin-top: 80px;
+}
+
+/* --------------------------
+       music-quiz
+-----------------------------*/
+
+.colors-samples.music-quiz {
+  display: flex;
+  gap: 40px;
+}
+
+.colors-samples-1 > .color:nth-child(1)::before {
+  background-color: #AECFED;
+}
+
+.colors-samples-1 > .color:nth-child(2)::before {
+  background-color: #00A0E8;
+}
+
+.colors-samples-1 > .color:nth-child(3)::before {
+  background-color: #153692;
+}
+
+.colors-samples-1 > .color:nth-child(4)::before {
+  background-color: #FED500;
+}
+
+.colors-samples-2 > .color:nth-child(1)::before {
+  background-color: #EA6088;
+}
+
+.colors-samples-2 > .color:nth-child(2)::before {
+  background-color: #EFA72B;
+}
+
+.colors-samples-2 > .color:nth-child(3)::before {
+  background-color: #DE6C31;
+}
+
+.colors-samples-2 > .color:nth-child(4)::before {
+  background-color: #008542;
+}
+
 
 /* --------------------------
         レスポンシブ
