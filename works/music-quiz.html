@@ -61,15 +61,15 @@
     </nav>
   </header>
   <main>
-    <section id="works-details">
+    <div id="works-details">
       <div class="wave">
         <canvas></canvas>
         <h2 class="section-title title">Works</h2>
       </div>
 
       <div class="works-details-contents">
-        <div class="container">
-          <div class="works-title-top">
+        <section class="works-title-top">
+          <div class="container">
             <div class="works-title">
               <p class="works-subtitle">たのしく音楽の世界へみちびく</p>
               <h2>おんがくクイズ</h2>
@@ -81,23 +81,29 @@
             </div>
           </div>
 
-          <a href="works/music-quiz/index.html">
-            <img class="mockup-image" src="../img/mockup-musicquiz.png" alt="">
-          </a>
-
-          <div class="concept">
+          <div class="container mockup">
+            <a href="works/music-quiz/index.html">
+              <img class="mockup-image" src="../img/mockup-musicquiz.png" alt="">
+            </a>
+          </div>
+        </section>
+      
+        <section class="concept">
+          <div class="container">
             <h3 class="works-details-section-title">concept</h3>
             <p class="works-details-text">
               音楽講師時代は、楽譜の読み方を教えるのにいつも苦労していました。特に小さな子供は、楽譜を読む必要性もなかなか理解できず、五線の細かな部分を認識するのも難しいため、どうにか楽しく学ぶ方法はないだろうかと模索していました。JavaScriptを学びながら、その経験を活かした音当てクイズゲームを思いつき、作成しました。4段階のレベル別で、楽しくステップアップできるゲームが完成しました。
             </p>
           </div>
+        </section>
 
-          <div class="design">
+        <section class="design">
+          <div class="container">
             <h3 class="works-details-section-title">design</h3>
             <p class="works-details-text">
               対象年齢は幼児〜小学校低学年の児童のため、シンプルに、分かりやすいデザインを心がけました。配色はカラフルなおもちゃが揃っているキッズルームをイメージしました。
             </p>
-
+  
             <div class="colors-samples music-quiz">
               <div class="colors-samples-1">
                 <div class="color">＃AECFED</div>
@@ -113,18 +119,38 @@
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="contents">
+        <section class="contents">
+          <div class="container">
             <h3 class="works-details-section-title">contents</h3>
             <p class="works-details-text">
               音域別に４つのレベルに分け、スモールステップで進めることができます。
             </p>
 
-          </div>
+            <div class="levels">
+              <img src="img/music-quiz/level-1.png" alt="" srcset="">
+              <img src="img/music-quiz/level-2.png" alt="" srcset="">
+              <img src="img/music-quiz/level-3.png" alt="" srcset="">
+              <img src="img/music-quiz/level-4.png" alt="" srcset="">
+            </div>
 
-        </div>
+            <div class="start">
+              <p class="works-details-text">
+                レベルを確認してスタート！
+              </p>
+
+              <div class="start-img">
+                <img src="img/music-quiz/start-1.png" alt="" srcset="">
+                <img src="img/music-quiz/start-2.png" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- <footer>
