@@ -545,13 +545,16 @@ header {
 /* --------------------------
         skills
 -----------------------------*/
+#skills {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .skills-contents {
   color: #87755E;
   background: url("../img/skills-bg.jpg");
   background-size: cover;
   background-position: center center;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skills-contents .container {
@@ -610,11 +613,14 @@ header {
         works
 -----------------------------*/
 
+#works {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .works-contents {
   background-image: url('../img/works-bg.png');
   height: fit-content;
   padding-bottom: 80px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-container {
@@ -788,12 +794,16 @@ cursor: none;
         contact
 -----------------------------*/
 
+#contact {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
 .contact-contents {
   background: url("../img/contact-bg.jpg");
   background-size: cover;
   background-position: left top;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   color: #854C60;
 }
