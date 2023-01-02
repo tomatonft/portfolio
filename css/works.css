@@ -37,7 +37,7 @@
 }
 
 .works-title-top {
-  margin-bottom: 40px;
+  margin-bottom: 64px;
 }
 
 .works-subtitle {
@@ -62,7 +62,7 @@
 }
 
 .works-details-contents .container.mockup {
-  margin-top: 40px;
+  margin-top: 64px;
 }
 
 .works-details-section-title {
@@ -70,17 +70,10 @@
   font-weight: 500;
 }
 
-.concept {
-  /* margin-top: 80px; */
-}
-
-.works-details-text {
+.works-details-text,
+.data-list {
   margin-left: 32px;
   margin-top: 24px;
-}
-
-.design {
-  /* margin-top: 80px; */
 }
 
 .colors-samples {
@@ -109,8 +102,21 @@
   left: -48px;
 }
 
-.contents {
-  /* margin-top: 80px; */
+.data {
+  padding-bottom: 80px;
+}
+
+.data-list li {
+  line-height: 1.6;
+}
+
+.data-list span{
+  display: block;
+  color: rgba(133, 133, 133, 0.8);
+}
+
+.data-list li + li {
+  margin-top: 24px;
 }
 
 /* --------------------------
