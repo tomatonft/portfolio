@@ -642,7 +642,6 @@ header {
 }
 
 .swiper-slide {
-  color: #87755E;
   width: 100%;
   height: auto;
   text-align: center;
@@ -662,6 +661,7 @@ header {
   text-align: left;
   font-weight: normal;
   margin: 16px 16px 8px;
+  color: #87755E;
 }
 
 .swiper-title span {
@@ -696,6 +696,7 @@ header {
 .swiper-text {
   padding: 0 16px 16px;
   text-align: left;
+  color: #87755E;
 }
 
 .swiper-pagination {
