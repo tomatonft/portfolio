@@ -119,6 +119,17 @@
   margin-top: 24px;
 }
 
+#visit-btn-sm {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  transition: all .6s;
+}
+
+
+
 /* --------------------------
        music-quiz
 -----------------------------*/
@@ -223,6 +234,20 @@
 @media (min-width: 880px) {
   .works-list li {
     width: calc((100% - 160px) / 3);
+  }
+
+  .works-title-top > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .visit-btn {
+    display: block;
+  }
+
+  #visit-btn-sm {
+    display: none;
   }
 }
 
