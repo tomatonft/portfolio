@@ -356,6 +356,32 @@ const dts = document.querySelectorAll('dt');
     });
   });
 
+// -----------
+//  works
+//  visit site ボタン
+// -----------
+const visitBtnSm = document.getElementById('visit-btn-sm');
+// const visitBtnLg = document.getElementById('visit-btn-lg');
+const windowWidth = window.innerWidth;
+let windowSm = 800;
 
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300 && windowWidth <= windowSm) {
+    visitBtnSm.classList.add('appear');
+  } else {
+    visitBtnSm.classList.remove('appear');
+  }
+});
+
+// function hide(array) {
+//   array.forEach(function (id) {
+//       document.getElementById(id).style.display = 'none';
+//   })
+// }
+// function show(array) {
+//   array.forEach(function (id) {
+//       document.getElementById(id).style.display = 'block';
+//   })
+// }
 
 }
