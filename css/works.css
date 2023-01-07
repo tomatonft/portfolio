@@ -231,11 +231,24 @@
   .works-list li + li {
     margin-top: 0;
   }
+
+  #other-works .works-list {
+    gap: 104px;
+  }
+
+  #other-works .works-list li {
+    width: calc((100% - 104px) / 2);
+  }
  
 }
 
 /* large screen */
 @media (min-width: 880px) {
+
+  .works-list {
+    padding-top: 104px;
+  }
+
   .works-list li {
     width: calc((100% - 160px) / 3);
   }
@@ -308,7 +321,7 @@
   .celebration-img img:nth-child(1) {
     width: 70%;
   }
-  
+
   .start-img img:nth-child(2),
   .message-img img:nth-child(2),
   .celebration-img img:nth-child(2) {
