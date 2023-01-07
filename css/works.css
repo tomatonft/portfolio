@@ -59,14 +59,6 @@
 
 #visit-btn-lg {
   display: none;
-  /* opacity: 0;
-  visibility: hidden; */
-  /* position: fixed; */
-}
-
-#visit-btn-lg.appear {
-  /* opacity: 1;
-  visibility: visible; */
 }
 
 .works-details-contents .container.mockup {
@@ -106,8 +98,16 @@
   height: 32px;
   border-radius: 50%;
   position: absolute;
-  top: -4.5px;
+  top: -7px;
   left: -48px;
+}
+
+.contents-inner {
+  margin-top: 80px;
+}
+
+.contents-img {
+  margin-top: 32px;
 }
 
 .data {
@@ -142,8 +142,6 @@
   opacity: 1;
   visibility: visible;
 }
-
-
 
 /* --------------------------
        music-quiz
@@ -186,14 +184,6 @@
   background-color: #008542;
 }
 
-.contents-inner {
-  margin-top: 80px;
-}
-
-.contents-img {
-  margin-top: 32px;
-}
-
 .levels {
   display: flex;
   flex-wrap: wrap;
@@ -221,7 +211,6 @@
   width: 50%;
   margin: 0 auto;
 }
-
 
 /* --------------------------
         レスポンシブ
@@ -271,20 +260,22 @@
 
   .works-details-contents section > .container {
     display: flex;
+    gap: 80px;
   }
 
   .works-details-section-title {
     line-height: 2.2;
+    width: 88px;
   }
 
   .works-details-inner {
-    margin-left: 80px;
+    flex: 1;
   }
 
   .works-details-text,
   .data-list {
     margin-top: 0;
-    /* margin-left: 80px; */
+    margin-left: 0;
   }
 
   .colors-samples {
@@ -293,8 +284,48 @@
     margin-right: auto;
   }
 
+  .contents-inner {
+    margin-top: 104px;
+  }
+
+  .contents-img {
+    margin-left: 32px;
+  }
+  
+  .levels img {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .start-img,
+  .answers-img,
+  .message-img,
+  .celebration-img {
+    flex-direction: row;
+  }
+
+  .start-img img:nth-child(1),
+  .message-img img:nth-child(1),
+  .celebration-img img:nth-child(1) {
+    width: 70%;
+  }
+  
+  .start-img img:nth-child(2),
+  .message-img img:nth-child(2),
+  .celebration-img img:nth-child(2) {
+    width: calc((100% - 46px) / 4);
+    margin: 0;
+  }
+
+  .answers-img img {
+    width: calc((100% - 24px) / 2);
+  }
+
   .data {
     padding-bottom: 104px;
+  }
+
+  .data h3 {
+    line-height: 1.6;
   }
 }
 
