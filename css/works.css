@@ -31,6 +31,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* position: relative; */
+  /* object-fit: contain; */
 }
 
 .works-details-contents > section {
@@ -218,11 +219,6 @@
 /* --------------------------
        andante
 -----------------------------*/
-.color-samples.andante {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-}
 
 .banner {
   width: fit-content;
@@ -371,9 +367,19 @@
   }
 
   .contents-img {
-    margin-left: 32px;
+    /* margin-left: 32px; */
+  }
+
+  .data {
+    padding-bottom: 104px;
+  }
+
+  .data h3 {
+    line-height: 1.6;
   }
   
+  
+  /* music-quiz */
   .levels img {
     width: calc((100% - 72px) / 4);
   }
@@ -402,13 +408,54 @@
     width: calc((100% - 24px) / 2);
   }
 
-  .data {
-    padding-bottom: 104px;
+  /* andante */
+
+  .andante {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
   }
 
-  .data h3 {
-    line-height: 1.6;
+  .features-img {
+    flex-direction: row;
   }
+
+  .hero,
+  .others-img,
+  .features-img {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-lg,
+  .others-lg,
+  .features-img img:nth-child(1) {
+    width: 70%;
+  }
+
+  .hero-sm,
+  .others-sm,
+  .features-img img:nth-child(2) {
+    width: calc((100% - 46px) / 4);
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .hero-sm img,
+  .others-sm img {
+    /* width: 100%; */
+    height: 244.56px;
+    width: fit-content;
+  }
+
+  .features-img img {
+    height: 244.906px;
+    width: fit-content;
+  }
+  
+
 }
 
 /* .header-navの表示 */
