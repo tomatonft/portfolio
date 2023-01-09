@@ -228,7 +228,8 @@
   height: 80px;
 }
 
-.andante .colors-samples-1 {
+.andante .colors-samples-1,
+.fujiwara .colors-samples-1 {
   width: fit-content;
   margin: 0 auto;
   margin-top: 40px;
@@ -272,6 +273,25 @@
 }
 
 .others-sm img {
+  width: calc((100% - 32px) / 2);
+}
+
+/* --------------------------
+       fujiwara
+-----------------------------*/
+.fujiwara .colors-samples-1 > .color:nth-child(1)::before {
+  background-color: #E6C5CF;
+}
+
+.fujiwara .colors-samples-1 > .color:nth-child(2)::before {
+  background-color: #BDD8DD;
+}
+
+.fujiwara .colors-samples-1 > .color:nth-child(3)::before {
+  background-color: #AF9DC0;
+}
+
+.hero-sm-2 img {
   width: calc((100% - 32px) / 2);
 }
 
@@ -406,7 +426,8 @@
 
   /* andante */
 
-  .andante {
+  .andante,
+  .fujiwara {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -444,6 +465,10 @@
   .features-sm img {
     height: 244.56px;
     width: fit-content;
+  }
+
+  .activities-sm img {
+    height: 481.1px;
   }
 
 }
