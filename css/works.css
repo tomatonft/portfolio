@@ -144,6 +144,19 @@
   visibility: visible;
 }
 
+.screen-shots-2,
+.answers-img {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.screen-shots-sm {
+  width: 50%;
+  margin: 0 auto;
+}
+
 /* --------------------------
        music-quiz
 -----------------------------*/
@@ -196,7 +209,7 @@
   width: calc((100% - 24px) / 2);
 }
 
-.screen-shots-2,
+/* .screen-shots-2,
 .answers-img {
   display: flex;
   flex-direction: column;
@@ -207,7 +220,7 @@
 .screen-shots-sm {
   width: 50%;
   margin: 0 auto;
-}
+} */
 
 /* --------------------------
        andante
@@ -417,7 +430,7 @@
     width: calc((100% - 24px) / 2);
   }
 
-  /* andante */
+  /* andante , fujiwara*/
 
   .andante,
   .fujiwara {
@@ -453,13 +466,19 @@
   }
 
   .fujiwara-features-lg img,
-  .andante-features-lg img {
+  .andante-features-lg img,
+  .fujiwara-service-lg img,
+  .fujiwara-profile-lg img {
     height: auto;
   }
 
   .fujiwara-features-sm img,
-  .andante-features-sm img  {
+  .andante-features-sm img {
     height: 245px;
+  }
+
+  .fujiwara-others-img {
+    align-items: center;
   }
 
 }
