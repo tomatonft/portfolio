@@ -302,6 +302,26 @@
   width: calc((100% - 32px) / 2);
 }
 
+/* --------------------------
+       usagi-an
+-----------------------------*/
+
+.usagi-an .colors-samples-1 {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.usagi-an .colors-samples-1 > .color:nth-child(1)::before {
+  background-color: #F3DEB9;
+}
+
+.usagi-an .colors-samples-1 > .color:nth-child(2)::before {
+  background-color: #A59F00;
+}
+
+.usagi-an .colors-samples-1 > .color:nth-child(3)::before {
+  background-color: #E8AAA3;
+}
 
 
 /* --------------------------
