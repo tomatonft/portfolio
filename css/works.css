@@ -331,6 +331,10 @@
   /* align-items: center; */
 }
 
+.works-portfolio-bg {
+  background-color: #fff;
+}
+
 .portfolio .colors-samples-1 > .color:nth-child(1)::before {
   background-color: #E5AAB4;
 }
@@ -525,17 +529,41 @@
   .fujiwara-features-lg img,
   .andante-features-lg img,
   .fujiwara-service-lg img,
-  .fujiwara-profile-lg img {
+  .fujiwara-profile-lg img,
+  .portfolio-hero-lg img,
+  .portfolio-contact-lg img,
+  .portfolio-canvas-lg img,
+  .portfolio-profile-lg img,
+  .portfolio-skills-lg img,
+  .portfolio-works-lg img {
     height: auto;
   }
 
   .fujiwara-features-sm img,
-  .andante-features-sm img {
+  .andante-features-sm img,
+  .portfolio-hero-sm img,
+  .portfolio-canvas-sm img {
     height: 245px;
   }
 
   .fujiwara-others-img {
     align-items: center;
+  }
+
+  .portfolio-contact-sm img {
+    height: 351.27px;
+  }
+
+  .portfolio-profile-sm img {
+    height: 694px;
+  }
+
+  .portfolio-skills-sm img {
+    height: 357px;
+  }
+
+  .portfolio-works-sm img {
+    height: 342px;
   }
 
 }
