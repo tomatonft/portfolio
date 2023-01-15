@@ -161,7 +161,8 @@
        music-quiz
 -----------------------------*/
 
-.colors-samples.music-quiz {
+.colors-samples.music-quiz,
+.colors-samples.portfolio {
   display: flex;
   gap: 40px;
 }
@@ -322,6 +323,42 @@
 .usagi-an .colors-samples-1 > .color:nth-child(3)::before {
   background-color: #E8AAA3;
 }
+
+/* --------------------------
+       portfolio
+-----------------------------*/
+.portfolio {
+  /* align-items: center; */
+}
+
+.portfolio .colors-samples-1 > .color:nth-child(1)::before {
+  background-color: #E5AAB4;
+}
+
+.portfolio .colors-samples-1 > .color:nth-child(2)::before {
+  background-color: #F0CED3;
+}
+
+.portfolio .colors-samples-1 > .color:nth-child(3)::before {
+  background-color: #D46982;
+}
+
+.portfolio .colors-samples-1 > .color:nth-child(4)::before {
+  background-color: #854C60;
+}
+
+.portfolio .colors-samples-2 > .color:nth-child(1)::before {
+  background-color: #87755E;
+}
+
+.portfolio .colors-samples-2 > .color:nth-child(2)::before {
+  background-color: #C1CD75;
+}
+
+.portfolio .colors-samples-2 > .color:nth-child(3)::before {
+  background-color: #6E9452;
+}
+
 
 
 /* --------------------------
