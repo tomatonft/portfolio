@@ -40,6 +40,16 @@ header > .container {
   margin-top: 8px;
 }
 
+.header-title h1,
+.header-subtitle {
+  transition: color .3s;
+}
+
+.header-title a:hover h1,
+.header-title a:hover .header-subtitle {
+  color: #e5aab4;
+}
+
 /* --------------------------
         profile
 -----------------------------*/
