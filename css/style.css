@@ -934,13 +934,22 @@ footer .container {
   transition: color .3s;
 }
 
-.footer-icons i:hover {
+.footer-icons i:hover,
+.footer-text a:hover .footer-title,
+.footer-text a:hover .footer-subtitle
+ {
   color: #E5AAB4;
 }
 
 .footer-text {
   margin-top: 56px;
   margin-left: 8px;
+  width: fit-content;
+}
+
+.footer-title,
+.footer-subtitle {
+  transition: color .3s;
 }
 
 .footer-title {
