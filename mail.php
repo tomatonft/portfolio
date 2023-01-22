@@ -128,7 +128,7 @@ $mailSignature = <<< FOOTER
 ──────────────────────
 Noriko Tomita Portfolio
 
-E-mail:xxxx@xxxx.com
+E-mail:info@noriko-tomita-web.com
 
 URL: http://www.noriko-tomita-web.com/
 ──────────────────────
