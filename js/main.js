@@ -331,5 +331,15 @@ const dts = document.querySelectorAll('dt');
     });
   });
 
+// -----------
+//  loading
+//  animation
+// -----------
+
+  window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+  }
+
 
 }
