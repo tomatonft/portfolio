@@ -99,7 +99,7 @@
 // ----------------
 // canvasによる波線複数描画
 // ----------------
-var unit = 100,
+let unit = 100,
     canvasList, // キャンバスの配列
     info = {}, // 全キャンバス共通の描画情報
     colorList; // 各キャンバスの色情報
@@ -123,8 +123,8 @@ function init() {
 
   
     // 各キャンバスの初期化
-    for(var canvasIndex in canvasList) {
-        var canvas = canvasList[canvasIndex];
+    for(const canvasIndex in canvasList) {
+        const canvas = canvasList[canvasIndex];
         canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
         canvas.height = 200;//波の高さ
         canvas.contextCache = canvas.getContext("2d");
@@ -134,8 +134,8 @@ function init() {
 }
 
 function update() {
-    for(var canvasIndex in canvasList) {
-        var canvas = canvasList[canvasIndex];
+    for(const canvasIndex in canvasList) {
+        const canvas = canvasList[canvasIndex];
         // 各キャンバスの描画
         draw(canvas, colorList[canvasIndex]);
     }
@@ -154,7 +154,7 @@ function update() {
  */
 function draw(canvas, color) {
     // 対象のcanvasのコンテキストを取得
-    var context = canvas.contextCache;
+    const context = canvas.contextCache;
     // キャンバスの描画をクリア
     context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -171,9 +171,9 @@ function draw(canvas, color) {
 * drawWave(色, 不透明度, 波の幅のzoom, 波の開始位置の遅れ)
 */
 function drawWave(canvas, color, alpha, zoom, delay) {
-  var context = canvas.contextCache;
+  const context = canvas.contextCache;
     context.strokeStyle = color;//線の色
-  context.lineWidth = 2;//線の幅
+    context.lineWidth = 2;//線の幅
   // context.lineWidth = 1;//線の幅
     context.globalAlpha = alpha;
     context.beginPath(); //パスの開始
@@ -188,13 +188,13 @@ function drawWave(canvas, color, alpha, zoom, delay) {
  * drawSine(時間, 波の幅のzoom, 波の開始位置の遅れ)
  */
 function drawSine(canvas, t, zoom, delay) {
-    var xAxis = Math.floor(canvas.height/2);
-    var yAxis = 0;
-    var context = canvas.contextCache;
+    const xAxis = Math.floor(canvas.height/2);
+    const yAxis = 0;
+    const context = canvas.contextCache;
     // Set the initial x and y, starting at 0,0 and translating to the origin on
     // the canvas.
-    var x = t; //時間を横の位置とする
-    var y = Math.sin(x)/zoom;
+    let x = t; //時間を横の位置とする
+    let y = Math.sin(x)/zoom;
     context.moveTo(yAxis, unit*y+xAxis); //スタート位置にパスを置く
 
     // Loop to draw segments (横幅の分、波を描画)
