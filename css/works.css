@@ -29,8 +29,6 @@
 .contents img {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* position: relative; */
-  /* object-fit: contain; */
 }
 
 .works-details-contents > section {
@@ -210,19 +208,6 @@
   width: calc((100% - 24px) / 2);
 }
 
-/* .screen-shots-2,
-.answers-img {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  justify-content: center;
-}
-
-.screen-shots-sm {
-  width: 50%;
-  margin: 0 auto;
-} */
-
 /* --------------------------
        andante
 -----------------------------*/
@@ -327,9 +312,6 @@
 /* --------------------------
        portfolio
 -----------------------------*/
-.portfolio {
-  /* align-items: center; */
-}
 
 .works-portfolio-bg {
   background-color: #fff;
@@ -362,8 +344,6 @@
 .portfolio .colors-samples-2 > .color:nth-child(3)::before {
   background-color: #6E9452;
 }
-
-
 
 /* --------------------------
         レスポンシブ

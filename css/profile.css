@@ -96,7 +96,6 @@ main {
   height: calc(100% - 8px);
   width: 2px;
   background-color: rgba(193, 205, 117, 1);
-  /* background-color: rgba(193, 205, 117, 0.75); */
 }
 
 .profile-details:last-child::after {
@@ -108,7 +107,6 @@ main {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(193, 205, 117, 1);
-  /* background-color: rgba(193, 205, 117, 0.75); */
   text-align: center;
   margin-top: 8px;
   position: relative;

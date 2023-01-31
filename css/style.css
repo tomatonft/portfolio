@@ -65,7 +65,6 @@ p {
 
 .button {
   width: 120px;
-  /* width: 112px; */
   height: 40px;
   font-size: 16px;
   display: block;
@@ -212,12 +211,10 @@ header {
   z-index: 10;
   display: flex;
   align-items: center;
-  
 }
 
 /* ハンバーガーメニュー（閉じている時） */
 #hamburger {
-  /* cursor: pointer; */
   z-index: 30;
   width: 30px;
   margin-left: auto;
