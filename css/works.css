@@ -160,7 +160,8 @@
 -----------------------------*/
 
 .colors-samples.music-quiz,
-.colors-samples.portfolio {
+.colors-samples.portfolio,
+.colors-samples.megumi-anami {
   display: flex;
   gap: 40px;
 }
@@ -346,6 +347,30 @@
 }
 
 /* --------------------------
+       megumi-anami
+-----------------------------*/
+
+.megumi-anami .colors-samples-1 > .color:nth-child(1)::before {
+  background-color: #352E2B;
+}
+
+.megumi-anami .colors-samples-1 > .color:nth-child(2)::before {
+  background-color: #E3E6E1;
+}
+
+.megumi-anami .colors-samples-1 > .color:nth-child(3)::before {
+  background-color: #918879;
+}
+
+.megumi-anami .colors-samples-2 > .color:nth-child(1)::before {
+  background-color: #AEAFAF;
+}
+
+.megumi-anami .colors-samples-2 > .color:nth-child(2)::before {
+  background-color: #C7B5A8;
+}
+
+/* --------------------------
         レスポンシブ
 -----------------------------*/
 /* medium screen */
@@ -515,7 +540,8 @@
   .portfolio-canvas-lg img,
   .portfolio-profile-lg img,
   .portfolio-skills-lg img,
-  .portfolio-works-lg img {
+  .portfolio-works-lg img,
+  .megumi-disco-lg img {
     height: auto;
   }
 
@@ -544,6 +570,10 @@
 
   .portfolio-works-sm img {
     height: 342px;
+  }
+
+  .megumi-disco-sm img {
+    height: 1076px;
   }
 
 }
