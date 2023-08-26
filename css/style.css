@@ -199,6 +199,51 @@ p {
   visibility: hidden;
 }
 
+/*========= セクション区切りデザイン ===============*/
+
+.custom-shape-divider-top-1692106993 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1692106993 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 80px;
+}
+
+.custom-shape-divider-top-1692106993 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/*========= particlesを描画するエリア設定 ===============*/
+
+#particles-js-1,
+#particles-js-2 { 
+  position: absolute;
+  top: 200px; 
+  left: 0;
+	z-index: -1;
+  /*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+  background-color: rgba(240, 206, 211, 0.2);
+  vertical-align: bottom;
+}
+
+.wrapper{
+	position: relative;
+  /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;
+  /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
 
 /* --------------------------
         header
@@ -411,14 +456,22 @@ header {
   justify-content: space-between; 
 }
 
+.site-title,
+.site-subtitle {
+  color: #fff;
+  opacity: 0;
+  width: fit-content;
+  padding: 8px;
+  background-color: rgba(87, 87, 87, 0.6);
+  border-radius: 4px;
+}
+
 .site-title {
   margin-left: 8px;
   margin-top: 180px;
   font-size: 20px;
   line-height: 27px;
   font-weight: 600;
-  color: #fff;
-  opacity: 0;
   transform: translateX(-100%);
   animation: site-title 4s forwards 1s;
 }
@@ -426,13 +479,11 @@ header {
 .site-subtitle {
   font-size: 16px;
   font-weight: 400;
-  color: #87755E;
   margin-bottom: 80px;
-  text-shadow: 1px 1px 1px #fff;
   margin-left: 30%;
-  opacity: 0;
   transform: translateY(100%);
   animation: site-subtitle 3s forwards 2s;
+  line-height: 1;
 }
 
 @keyframes site-title {
@@ -527,9 +578,14 @@ header {
 /* --------------------------
         about
 -----------------------------*/
+
+#about {
+  height: 100%;
+  position: relative;
+}
+
 .about-contents {
   width: 100%;
-  background: linear-gradient(#fff, #E5AAB4);
 }
 
 #about .container {
@@ -562,6 +618,8 @@ header {
   transform: translateX(-16px) translateY(-80px);
   position: relative;
   z-index: 2;
+  border: 2px solid #87755E;
+  border-left: none;
 }
 
 .about-profile p {
@@ -596,22 +654,19 @@ header {
 
 .gradient-bg {
   width: 100%;
-  height: 16px;
-  background: linear-gradient(#E5AAB4, #fff);
+  height: 80px;
+  background: linear-gradient(rgba(240, 206, 211, 0.2), #fff);
 }
 
 /* --------------------------
         skills
 -----------------------------*/
 #skills {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .skills-contents {
   color: #87755E;
-  background: url("../img/skills-bg.jpg");
-  background-size: cover;
-  background-position: center center;
   width: 100%;
 }
 
@@ -671,12 +726,7 @@ header {
         works
 -----------------------------*/
 
-#works {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .works-contents {
-  background-image: url('../img/works-bg.jpg');
   height: fit-content;
   padding-bottom: 80px;
 }
@@ -690,7 +740,7 @@ header {
 }
 
 .swiper{
-  padding:0 50px 50px 50px;
+  padding: 8px 50px 50px 50px;
   margin-top: 88px;
 }
 
@@ -706,7 +756,7 @@ header {
   padding-top: 24px;
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
 }
@@ -854,12 +904,11 @@ cursor: none;
 -----------------------------*/
 
 #contact {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
 .contact-contents {
-  background: url("../img/contact-bg.jpg");
+  background: url("../img/contact-bg.png");
   background-size: cover;
   background-position: left top;
   width: 100%;
@@ -941,6 +990,7 @@ button {
 footer {
   background-color: #87755E;
   padding-bottom: 24px;
+  position: relative;
 }
 
 footer .container {
@@ -1083,6 +1133,7 @@ small {
     padding: 104px 32px 104px 32px;
     width: 70%;
     border-radius: 16px;
+    border-left: 2px solid #87755E;
     transform: translateX(0) translateY(-88px);
 }
 
