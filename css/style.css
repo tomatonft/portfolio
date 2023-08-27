@@ -459,7 +459,7 @@ header {
 .site-title,
 .site-subtitle {
   color: #fff;
-  opacity: 0;
+  /* opacity: 0; */
   width: fit-content;
   padding: 8px;
   background-color: rgba(87, 87, 87, 0.6);
@@ -472,8 +472,8 @@ header {
   font-size: 20px;
   line-height: 27px;
   font-weight: 600;
-  transform: translateX(-100%);
-  animation: site-title 4s forwards 1s;
+  /* transform: translateX(-100%); */
+  /* animation: site-title 4s forwards 1s; */
 }
 
 .site-subtitle {
@@ -481,8 +481,8 @@ header {
   font-weight: 400;
   margin-bottom: 80px;
   margin-left: 30%;
-  transform: translateY(100%);
-  animation: site-subtitle 3s forwards 2s;
+  /* transform: translateY(100%); */
+  /* animation: site-subtitle 3s forwards 2s; */
   line-height: 1;
 }
 
