@@ -858,7 +858,8 @@ cursor: none;
  display: none;
 }
 
-#works .link-btn {
+#works .link-btn,
+.link-btn-ver-1 {
   margin: 80px auto 0;
 }
 
