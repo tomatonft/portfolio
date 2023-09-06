@@ -552,7 +552,6 @@
 
   .fujiwara-features-sm img,
   .andante-features-sm img,
-  /* .portfolio-hero-sm img, */
   .portfolio-canvas-sm img {
     height: 245px;
   }
@@ -566,7 +565,6 @@
   }
 
   .portfolio-contact-sm img {
-    /* height: 351.27px; */
     height: 412.9px;
   }
 
@@ -575,12 +573,10 @@
   }
 
   .portfolio-skills-sm img {
-    /* height: 357px; */
     height: 350.59px;
   }
 
   .portfolio-works-sm img {
-    /* height: 342px; */
     height: 340.24px;
   }
 
