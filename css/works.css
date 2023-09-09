@@ -570,7 +570,9 @@
   .portfolio-skills-lg img,
   .portfolio-works-lg img,
   .megumi-disco-lg img,
-  .soin-hero-lg img {
+  .soin-hero-lg img,
+  .soin-troubles-lg img,
+  .soin-solution-lg img {
     height: auto;
   }
 
@@ -610,6 +612,14 @@
 
   .soin-hero-sm img {
     height: 244.3px;
+  }
+
+  .soin-troubles-sm img {
+    height: 243.38px;
+  }
+
+  .soin-solution-sm img {
+    height: 271.27px;
   }
 
 }
