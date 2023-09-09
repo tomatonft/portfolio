@@ -572,7 +572,9 @@
   .megumi-disco-lg img,
   .soin-hero-lg img,
   .soin-troubles-lg img,
-  .soin-solution-lg img {
+  .soin-solution-lg img,
+  .soin-usage-lg img,
+  .soin-voices-lg img {
     height: auto;
   }
 
@@ -620,6 +622,14 @@
 
   .soin-solution-sm img {
     height: 271.27px;
+  }
+
+  .soin-usage-sm img {
+    height: 269.4px;
+  }
+
+  .soin-voices-sm img {
+    height: 380px;
   }
 
 }
