@@ -27,6 +27,10 @@
   position: relative;
 }
 
+.contents {
+  padding-bottom: 8px;
+}
+
 .contents img {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
