@@ -167,7 +167,8 @@
 .colors-samples.music-quiz,
 .colors-samples.portfolio,
 .colors-samples.megumi-anami,
-.colors-samples.soin-company {
+.colors-samples.soin-company,
+.colors-samples.kyusyoku-pan {
   display: flex;
   gap: 40px;
 }
@@ -401,6 +402,34 @@
   background-color: #FFFFFF;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
+
+/* --------------------------
+       kyusyoku-pan
+-----------------------------*/
+.works-details-text.kyusyoku-pan a {
+  text-decoration: underline;
+  color: #854C60;
+  font-size: 16px;
+}
+
+.kyusyoku-pan .colors-samples-1 > .color:nth-child(1)::before {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.kyusyoku-pan .colors-samples-1 > .color:nth-child(2)::before {
+  background-color: #000;
+}
+
+.kyusyoku-pan .colors-samples-2 > .color:nth-child(1)::before {
+  background-color: #FBF8EF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.kyusyoku-pan .colors-samples-2 > .color:nth-child(2)::before {
+  background-color: #FDD89D;
+}
+
 
 
 /* --------------------------
