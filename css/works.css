@@ -608,7 +608,12 @@
   .soin-troubles-lg img,
   .soin-solution-lg img,
   .soin-usage-lg img,
-  .soin-voices-lg img {
+  .soin-voices-lg img,
+  .kyusyoku-hero-lg img,
+  .kyusyoku-products-lg img,
+  .kyusyoku-concept-lg img,
+  .kyusyoku-news-lg img,
+  .kyusyoku-info-lg img {
     height: auto;
   }
 
@@ -664,6 +669,26 @@
 
   .soin-voices-sm img {
     height: 380px;
+  }
+
+  .kyusyoku-hero-sm img {
+    height: 239.63px;
+  }
+
+  .kyusyoku-products-sm img {
+    height: 620.89px;
+  }
+
+  .kyusyoku-concept-sm img {
+    height: 768.66px;
+  }
+
+  .kyusyoku-news-sm img {
+    height: 418.13px;
+  }
+
+  .kyusyoku-info-sm img {
+    height: 357.91px;
   }
 
 }
