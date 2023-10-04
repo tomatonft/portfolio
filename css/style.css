@@ -79,6 +79,7 @@ p {
   background-color: #854C60;
   color: #fff;
   border: 1px solid #854C60;
+  transition: all .3s;
 }
 
 .link-btn:hover {
