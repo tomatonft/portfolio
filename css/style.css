@@ -758,11 +758,18 @@ header {
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .item {
+  /* flex-grow: 1; */
+}
+
+.item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   flex-grow: 1;
 }
 
@@ -771,6 +778,12 @@ header {
   font-weight: normal;
   margin: 16px 16px 8px;
   color: #87755E;
+}
+
+.swiper-title-short {
+  height: 45.5px;
+  display: flex;
+  align-items: end;
 }
 
 .swiper-title span {
