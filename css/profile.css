@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-html,body,a {
-  cursor: auto; 
-}
-
 body {
   color: #4a4a4a;
 }
