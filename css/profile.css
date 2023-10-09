@@ -179,9 +179,14 @@ dl > div + div {
 dt {
   display: flex;
   align-items: center;
-  cursor: pointer;
   user-select: none;
   margin-left: 8px;
+}
+
+dt:hover .question-mark,
+dt:hover p,
+dt:hover .plus {
+  opacity: 0.6;
 }
 
 dd {
@@ -207,6 +212,7 @@ dd {
 .question-mark {
   color: #fff;
   background-color: rgb(193, 205, 117);
+  transition: opacity .3s;
 }
 
 .answer-mark {
@@ -218,6 +224,7 @@ dt > p {
   font-size: 16px;
   flex: 1;
   line-height: 1.6;
+  transition: opacity .3s;
 }
 
 .plus {
@@ -225,7 +232,7 @@ dt > p {
   color: #4a4a4a;
   margin-left: 16px;
   margin-right: 16px;
-  transition: transform .3s;
+  transition: all .3s;
 }
 
 dd > p {
